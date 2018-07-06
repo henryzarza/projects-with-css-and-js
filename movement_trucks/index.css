@@ -6,6 +6,7 @@
     --white:            #fff;
     --green-dark:       #577300;
     --green-light:      #91BF00;
+    --gray-road:        #5b5652;
 
     --font-size-base:     14pt;
     --font-weight-base:   400;
@@ -53,18 +54,53 @@ body {
 .container_item {
     border: .25rem solid var(--white);
     border-radius: 50%;
-    height: 21rem;
+    height: 21.5rem;
+    position: relative;
 
     background: linear-gradient(var(--green-dark), var(--green-light));
     box-shadow: 0 .1rem .5rem rgba(0,0,0,.5);
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* overflow: hidden; */
 }
 
 .container_item_image {
-    width: 16rem;
+    width: 14rem;
+    z-index: 1;
+    margin-right: 1rem;
+}
+
+.road {
+    background-color: var(--gray-road);
+    width: 36rem;
+    height: 9rem;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 0;
+    /* border-bottom: 3pt solid red; */
+    border-top: 3pt solid var(--white);
+    transform: rotate(-34deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: movementRoad 2s linear infinite;
+}
+
+.line {
+    background-color: var(--white);
+    height: .5rem;
+    width: 7rem;
+}
+
+@keyframes movementRoad {
+    from {
+        transform: rotate(-34deg) translateX(0);
+    }
+    to {
+        transform: rotate(-34deg) translateX(-11rem);
+    }
 }
 
 @media screen and (max-width: 60rem) {
