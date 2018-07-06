@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+:root {
+    --bg-color:         #eee;
+    --black:            #0d101a;
+    --white:            #fff;
+    --green-dark:       #577300;
+    --green-light:      #91BF00;
+
+    --font-size-base:     14pt;
+    --font-weight-base:   400;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.4;
+    text-align: left;
+    font-family: 'Karla', sans-serif;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-base);
+
+    color: var(--black);
+    background-color: var(--bg-color);
+}
+
+.title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    color: var(--white);
+    text-shadow: -.09rem 0 var(--black), 0 .09rem var(--black), .09rem 0 var(--black), 0 -.09rem var(--black);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+
+    padding: 1rem;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.container_item {
+    border: .25rem solid var(--white);
+    border-radius: 50%;
+    height: 21rem;
+
+    background: linear-gradient(var(--green-dark), var(--green-light));
+    box-shadow: 0 .1rem .5rem rgba(0,0,0,.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_item_image {
+    width: 16rem;
+}
+
+@media screen and (max-width: 60rem) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 35rem) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
