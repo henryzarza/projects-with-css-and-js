@@ -63,28 +63,33 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .container_item_image {
     width: 14rem;
-    z-index: 1;
+    position: relative;
     margin-right: 1rem;
+
+    z-index: 1;
 }
 
 .road {
-    background-color: var(--gray-road);
     width: 36rem;
     height: 9rem;
+    
     position: absolute;
-    bottom: 3.5rem;
-    left: 0;
-    /* border-bottom: 3pt solid red; */
-    border-top: 3pt solid var(--white);
-    transform: rotate(-34deg);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    bottom: 3.5rem;
+    left: 0;
+    
+    border-top: 3pt solid var(--white);
+    
+    background-color: var(--gray-road);
+
+    transform: rotate(-34deg);
     animation: movementRoad 2s linear infinite;
 }
 
@@ -92,6 +97,77 @@ body {
     background-color: var(--white);
     height: .5rem;
     width: 7rem;
+}
+
+/* Tooltip */
+.tooltip-content {
+	position: absolute;
+	padding: 0.5rem 1rem 2.5rem;
+	bottom: 50%;
+    right: 8rem;
+    width: 11.3rem;
+
+    pointer-events: none;
+	text-align: center;
+	z-index: 2;
+	opacity: 0;
+
+    transform: scale3d(0, 0, 1);
+    transition: opacity, transform .3s;
+}
+
+.tooltip-shape {
+	position: absolute;
+	width: 13.78rem;
+	height: 10rem;
+    bottom: 0;
+    right: 5.5rem;
+
+    z-index: 1;
+    pointer-events: none;
+    transform: translate3d(0, -90%, 0);
+}
+
+.tooltip-shape svg {
+	stroke: var(--black);
+	stroke-width: 2;
+}
+
+.tooltip-shape svg path {
+    fill: var(--white);
+    opacity: 0;
+
+    transform: scale3d(0,0,1);
+	transform-origin: 50% 50%;
+	transition: opacity, transform .3s;
+}
+
+/* Hover in tooltip */
+.container_item:hover .tooltip-content {
+	opacity: 1;
+	transform: scale3d(.8, .8, 1);
+	transition-delay: .15s;
+}
+
+.container_item:hover .tooltip-shape {
+	pointer-events: auto;
+}
+
+.container_item:hover .tooltip-shape svg path {
+	opacity: 1;
+	transform: scale3d(1, 1, 1);
+}
+
+.container_item:hover .tooltip-shape svg path#path2 {
+	transition-delay: .07s;
+}
+
+.container_item:hover .tooltip-shape svg path#path3 {
+	transition-delay: .14s;
+}
+
+.container_item:hover .tooltip-shape svg path#path4 {
+	transition-delay: .21s;
 }
 
 @keyframes movementRoad {
