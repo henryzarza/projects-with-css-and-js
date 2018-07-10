@@ -20,7 +20,6 @@
 
 body {
     line-height: 1.4;
-    text-align: left;
     font-family: 'Karla', sans-serif;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-base);
@@ -30,7 +29,7 @@ body {
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
 
@@ -43,11 +42,11 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
 
     padding: 1rem;
-    max-width: 70rem;
+    max-width: 48rem;
     margin: 0 auto;
 }
 
@@ -179,14 +178,9 @@ body {
     }
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 44rem) {
     .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 35rem) {
-    .container {
+        max-width: 24rem;
         grid-template-columns: 1fr;
     }
 }
