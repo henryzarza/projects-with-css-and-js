@@ -9,4 +9,4 @@ This repository is a compilation of some interesting projects using CSS and JS.
     - [Github](https://github.com/henryzarza/pojects-with-css-and-js/tree/master/movement_trucks)
 2. Long Shadow
     - [Codepen](https://codepen.io/HenryZarza/full/yqypNp/)
-    - [Github](https://github.com/henryzarza/pojects-with-css-and-js/tree/master/long_shadow)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/long-shadow)
