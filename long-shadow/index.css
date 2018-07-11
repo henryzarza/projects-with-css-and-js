@@ -1,0 +1,139 @@
+:root {
+    --bg-color:         #f8f8f8;
+    --white:            #fff;
+    --vue-color:        #3fba84;
+    --react-color:      #0bd8ff;
+    --angular-color:    #dd0031;
+    --shadow-color:     #000;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14pt;
+    background-color: var(--bg-color);
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.05rem 0.1rem 0.1rem rgba(0,0,0,.5);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+    max-width: 40rem;
+    margin: 2rem auto 1rem;
+}
+
+.link {
+    width: 7rem;
+    height: 7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 4rem;
+    color: var(--white);
+    border-radius: .35rem;
+    overflow: hidden;
+
+    transition: all 210ms linear;
+    box-shadow: 0.1rem 0.25rem 0.5rem rgba(0,0,0,.3);
+}
+
+.link--react {
+    background: linear-gradient(135deg, #58e4ff 0%, var(--react-color) 100%);
+}
+
+.link--react:hover {
+    --shadow-color: #00748b;
+    background: linear-gradient(135deg, var(--react-color) 0%, #009fbe 100%);
+}
+
+.link--angular {
+    background: linear-gradient(135deg, #ff2b5a 0%, var(--angular-color) 100%);
+}
+
+.link--angular:hover {
+    --shadow-color: #5e0015;
+    background: linear-gradient(135deg, var(--angular-color) 0%, #910020 100%);
+}
+
+.link--vue {
+    background: linear-gradient(135deg, #75d0a8 0%, var(--vue-color) 100%);
+}
+
+.link--vue:hover {
+    --shadow-color: #1f5b40;
+    background: linear-gradient(135deg, var(--vue-color) 0%, #2c815b 100%);
+}
+
+.link > i {
+    transition: text-shadow 210ms linear;
+}
+
+.link:hover > i {
+    text-shadow: 
+    1px 1px 0px var(--shadow-color),
+    2px 2px 0px var(--shadow-color),
+    3px 3px 0px var(--shadow-color),
+    4px 4px 0px var(--shadow-color),
+    5px 5px 0px var(--shadow-color),
+    6px 6px 0px var(--shadow-color),
+    7px 7px 0px var(--shadow-color),
+    8px 8px 0px var(--shadow-color),
+    9px 9px 0px var(--shadow-color),
+    10px 10px 0px var(--shadow-color),
+    11px 11px 0px var(--shadow-color),
+    12px 12px 0px var(--shadow-color),
+    13px 13px 0px var(--shadow-color),
+    14px 14px 0px var(--shadow-color),
+    15px 15px 0px var(--shadow-color),
+    16px 16px 0px var(--shadow-color),
+    17px 17px 0px var(--shadow-color),
+    18px 18px 0px var(--shadow-color),
+    19px 19px 0px var(--shadow-color),
+    20px 20px 0px var(--shadow-color),
+    21px 21px 0px var(--shadow-color),
+    22px 22px 0px var(--shadow-color),
+    23px 23px 0px var(--shadow-color),
+    24px 24px 0px var(--shadow-color),
+    25px 25px 0px var(--shadow-color),
+    26px 26px 0px var(--shadow-color),
+    27px 27px 0px var(--shadow-color),
+    28px 28px 0px var(--shadow-color),
+    29px 29px 0px var(--shadow-color),
+    30px 30px 0px var(--shadow-color),
+    31px 31px 0px var(--shadow-color),
+    32px 32px 0px var(--shadow-color),
+    33px 33px 0px var(--shadow-color),
+    34px 34px 0px var(--shadow-color),
+    35px 35px 0px var(--shadow-color),
+    36px 36px 0px var(--shadow-color),
+    37px 37px 0px var(--shadow-color),
+    38px 38px 0px var(--shadow-color),
+    39px 39px 0px var(--shadow-color),
+    40px 40px 0px var(--shadow-color),
+    41px 41px 0px var(--shadow-color),
+    42px 42px 0px var(--shadow-color),
+    43px 43px 0px var(--shadow-color),
+    44px 44px 0px var(--shadow-color),
+    45px 45px 0px var(--shadow-color);
+}
+
+@media screen and (max-width: 24rem) {
+    .container {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
