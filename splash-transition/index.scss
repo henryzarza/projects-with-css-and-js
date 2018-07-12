@@ -1,5 +1,159 @@
-$test: red;
+$circlesNumber:     6;
+$strokeWidth:       150;
+$radius:            100;
+$pi:                3.15;
+$maxLen:            10000;
+$primary-color:   #0277bd;
 
-body {
-    background-color: $test;
+* {
+    box-sizing: border-box;
+}
+  
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+
+    background-image: url('./img/medellin.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    transform: scale(1.5);
+}
+
+svg {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.svg-center {
+    border-radius: 100%;
+}
+
+path {
+    fill: none;
+    stroke: black;
+    stroke-width: 6rem;
+
+    &.path-center {
+        stroke-width: 200px;
+    }
+}
+
+.background,
+.svg-borders,
+.path-center,
+.path-borders {
+    transition: 2s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+.button {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 0.8rem 1.2rem;
+
+    color: #fff;
+    background-color: transparent;
+
+    outline: none;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    z-index: 1;
+    border: .08rem solid #fff;
+    cursor: pointer;
+    font-weight: bold;
+
+    transform: translate(-50%, -50%);
+    transition: 300ms;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.attribution {
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    color: $primary-color;
+    bottom: .5rem;
+    z-index: 1;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Open state */
+.open {
+    .background {
+        transform: scale(1);
+    }
+
+    .svg-borders {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    .path-center {
+        stroke-width: 26rem;
+    }
+
+    .button {
+        border: none;
+        background-color: $primary-color;
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+
+        &:hover {
+            background-color: lighten($primary-color, 12%);
+        }
+    }
+}
+
+/* Drawing SVG paths */
+// Loop to generate convenient stroke-* values
+@while $circlesNumber > 0 {
+
+    // Calculate the SVG path length (approximately)
+    $currentRadius: $radius + ($circlesNumber) * $strokeWidth - $strokeWidth / 2;
+    $len: 2 * $pi * $currentRadius;
+
+    // Draw the entire path
+    .path-borders:nth-child(#{$circlesNumber}) {
+        stroke-dashoffset: $maxLen;
+        stroke-dasharray: $maxLen 0 $len;
+    }
+
+    .open {
+        // "Erase" the path, with alternating direction
+        .path-borders:nth-child(#{$circlesNumber}) {
+            @if ($circlesNumber % 2 == 0) {
+                stroke-dasharray: $maxLen 0 0;
+            } @else {
+                stroke-dasharray: $maxLen $len $len;
+            }
+        }
+    }
+
+    $circlesNumber: $circlesNumber - 1;
 }

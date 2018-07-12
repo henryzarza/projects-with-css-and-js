@@ -1,5 +1,164 @@
-body {
-  background-color: red;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/medellin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.5);
+}
+
+svg {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.svg-center {
+  border-radius: 100%;
+}
+
+path {
+  fill: none;
+  stroke: black;
+  stroke-width: 6rem;
+}
+path.path-center {
+  stroke-width: 200px;
+}
+
+.background,
+.svg-borders,
+.path-center,
+.path-borders {
+  transition: 2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.button {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  z-index: 1;
+  border: 0.08rem solid #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  transition: 300ms;
+}
+.button:hover {
+  background-color: #0277bd;
+}
+.button.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.attribution {
+  position: fixed;
+  left: 0;
+  right: 0;
+  color: #0277bd;
+  bottom: 0.5rem;
+  z-index: 1;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.attribution:hover {
+  text-decoration: underline;
+}
+
+/* Open state */
+.open .background {
+  transform: scale(1);
+}
+.open .svg-borders {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.open .path-center {
+  stroke-width: 26rem;
+}
+.open .button {
+  border: none;
+  background-color: #0277bd;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+.open .button:hover {
+  background-color: #039dfa;
+}
+
+/* Drawing SVG paths */
+.path-borders:nth-child(6) {
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000 0 5827.5;
+}
+
+.open .path-borders:nth-child(6) {
+  stroke-dasharray: 10000 0 0;
+}
+
+.path-borders:nth-child(5) {
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000 0 4882.5;
+}
+
+.open .path-borders:nth-child(5) {
+  stroke-dasharray: 10000 4882.5 4882.5;
+}
+
+.path-borders:nth-child(4) {
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000 0 3937.5;
+}
+
+.open .path-borders:nth-child(4) {
+  stroke-dasharray: 10000 0 0;
+}
+
+.path-borders:nth-child(3) {
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000 0 2992.5;
+}
+
+.open .path-borders:nth-child(3) {
+  stroke-dasharray: 10000 2992.5 2992.5;
+}
+
+.path-borders:nth-child(2) {
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000 0 2047.5;
+}
+
+.open .path-borders:nth-child(2) {
+  stroke-dasharray: 10000 0 0;
+}
+
+.path-borders:nth-child(1) {
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000 0 1102.5;
+}
+
+.open .path-borders:nth-child(1) {
+  stroke-dasharray: 10000 1102.5 1102.5;
 }
 
 /*# sourceMappingURL=index.css.map */
