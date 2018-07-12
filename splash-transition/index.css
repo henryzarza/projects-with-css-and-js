@@ -32,7 +32,7 @@ svg {
 
 path {
   fill: none;
-  stroke: black;
+  stroke: rgba(0, 0, 0, 0.7);
   stroke-width: 6rem;
 }
 path.path-center {
@@ -100,7 +100,7 @@ path.path-center {
 .open .button {
   border: none;
   background-color: #0277bd;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1.1rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 .open .button:hover {
   background-color: #039dfa;
