@@ -1,0 +1,23 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    background-color: #eeffee;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.05rem 0.1rem 0.1rem rgba(0,0,0,.5);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    margin: 2rem auto 1rem;
+}
