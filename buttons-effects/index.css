@@ -6,18 +6,59 @@
 
 body {
     font-size: 1rem;
-    background-color: #eeffee;
+    background-color: #efefef;
+}
+
+button {
+    cursor: pointer;
 }
 
 .title {
     font-size: 3rem;
     text-align: center;
-    text-shadow: 0.05rem 0.1rem 0.1rem rgba(0,0,0,.5);
+    color: #3B3D37;
+    text-shadow: 0.05rem 0.2rem 0.1rem rgba(0,0,0,.2);
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
     margin: 2rem auto 1rem;
+}
+
+.item {
+    height: 20rem;
+}
+
+.item-1 {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-1 {
+    width: 5rem;
+    height: 5rem;
+
+    color: #1a1a1a;
+    background-color: #39FF14;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+
+    transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 200ms cubic-bezier(.2,0,.7,1);
+}
+
+.button-1:after{
+    content: "+";
+    font-size: 2.5rem;
+    line-height: 1em;
+}
+
+.button-1:hover {
+    transform: rotate(45deg);
+    box-shadow: 0 0 .05rem 1rem rgba(57, 255, 20, .4),
+                0 0 .05rem 2rem rgba(57, 255, 20, .1),
+                0 0 .05rem 3rem rgba(57, 255, 20, .1);
 }
