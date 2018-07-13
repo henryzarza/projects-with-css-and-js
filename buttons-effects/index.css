@@ -47,7 +47,7 @@ button {
     border: none;
     outline: none;
 
-    transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 200ms cubic-bezier(.2,0,.7,1);
+    transition: box-shadow .4s cubic-bezier(.2,0,.7,1), transform .2s cubic-bezier(.2,0,.7,1);
 }
 
 .button-1:after{
