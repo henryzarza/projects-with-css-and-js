@@ -3,6 +3,7 @@
     --color-button-2:   #D24D57;
     --color-button-3:   #FFEB3B;
     --color-button-4:   #fff;
+    --color-button-5:   #ECEDE7;
 }
 
 *, ::after, ::before {
@@ -53,6 +54,10 @@ button {
 
 .item-4 {
     --item-bg-color: #cfcfcf;
+}
+
+.item-5 {
+    --item-bg-color: #3A452C;
 }
 
 /* Button 1 */
@@ -249,3 +254,44 @@ button {
     to { background-position: 9rem }
 } 
 /* End button 4 */
+
+/* Button 5 */
+.button-5 {
+    padding: 1rem 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: .3rem;
+    z-index: 1;
+
+    color: var(--color-button-5);
+    background-color: transparent;
+
+    transition: color 600ms cubic-bezier(.77, 0, .175, 1);
+}
+
+.button-5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+	left: 50%;
+	height: 0;
+	width: 0;
+	border-top: .1rem solid var(--color-button-5);
+    z-index: -1;
+
+    background-color: var(--color-button-5);
+    will-change: width, height, left;
+    transition: all 600ms cubic-bezier(.77, 0, .175, 1);    
+}
+
+.button-5:hover {
+    color: #000;
+}
+
+.button-5:hover::before {
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+/* End button 5 */
