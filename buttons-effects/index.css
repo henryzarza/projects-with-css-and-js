@@ -4,6 +4,7 @@
     --color-button-3:   #FFEB3B;
     --color-button-4:   #fff;
     --color-button-5:   #ECEDE7;
+    --color-button-6:   #044260;
 }
 
 *, ::after, ::before {
@@ -58,6 +59,10 @@ button {
 
 .item-5 {
     --item-bg-color: #3A452C;
+}
+
+.item-6 {
+    --item-bg-color: #ecf0f1;
 }
 
 /* Button 1 */
@@ -295,3 +300,53 @@ button {
     width: 100%;
 }
 /* End button 5 */
+
+/* Button 6 */
+.button-6 {
+    padding: 1rem 2rem;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    color: var(--color-button-6);
+    background-color: transparent;
+}
+
+.button-6::after,
+.button-6::before {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    border: .1rem solid var(--color-button-6);
+    transition: all 470ms ease-in-out;
+}
+
+.button-6::after {
+    top: 0;
+    right: 0;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: var(--color-button-6);
+    border-right-color: var(--color-button-6);
+}
+
+.button-6::before {
+    bottom: 0;
+    left: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: var(--color-button-6);
+    border-left-color: var(--color-button-6);
+}
+
+.button-6:hover::before,
+.button-6:hover::after {
+    width: 100%;
+    height: 100%;
+    border-bottom-color: var(--color-button-6);
+    border-right-color: var(--color-button-6);
+    border-top-color: var(--color-button-6);
+    border-left-color: var(--color-button-6);
+}
+/* End button 6 */
