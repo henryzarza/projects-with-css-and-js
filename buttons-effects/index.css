@@ -1,6 +1,7 @@
 :root {
     --item-bg-color:    #fff;
-    --color-button-2:   #f51a40;
+    --color-button-2:   #D24D57;
+    --color-button-3:   #FFEB3B;
 }
 
 *, ::after, ::before {
@@ -43,6 +44,10 @@ button {
 
 .item-1 {
     --item-bg-color: #1a1a1a;
+}
+
+.item-3 {
+    --item-bg-color: #009688;
 }
 
 /* Button 1 */
@@ -160,3 +165,45 @@ button {
     }
 }
 /* End button 2 */
+
+/* Button 3 */
+.button-3 {
+    padding: 1rem 2rem;
+    border-radius: .15rem;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+
+    color: var(--color-button-3);
+    background-color: transparent;
+    border: .1rem solid var(--color-button-3);
+
+    overflow: hidden;
+    transition: color 270ms ease-in-out;
+}
+
+.button-3::after {
+    content: "";
+    position: absolute;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    z-index: -1;
+
+    background: var(--color-button-3);
+
+    will-change: height;
+    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    transition: all 270ms ease;
+}
+
+.button-3:hover::after {
+    height: 250%;
+}
+
+.button-3:hover {
+    color: #fff;
+}
+/* End button 3 */
