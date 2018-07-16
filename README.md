@@ -13,3 +13,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 3. Long Shadow
     - [Codepen](https://codepen.io/HenryZarza/full/wxaXEE/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/splash-transition)
+4. Buttons effects
+    - [Codepen](https://codepen.io/HenryZarza/full/gjPeZB/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/buttons-effects)
