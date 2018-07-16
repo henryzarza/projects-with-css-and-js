@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+:root {
+    --black:            #0e100b;
+    --white:            #fff;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.4;
+    font-family: 'Lora', serif;
+    font-size: 14pt;
+    font-weight: 400;
+
+    color: var(--black);
+    background-color: #838b8d1a;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    
+    background: radial-gradient(circle, #fff 10%, #838b8d1a 50%, #838b8d66 75%, #838b8d 100%);
+}
