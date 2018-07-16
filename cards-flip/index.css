@@ -2,7 +2,6 @@
 
 :root {
     --black:            #0e100b;
-    --white:            #fff;
 }
 
 *, ::after, ::before {
@@ -12,18 +11,56 @@
 }
 
 body {
-    line-height: 1.4;
     font-family: 'Lora', serif;
     font-size: 14pt;
     font-weight: 400;
 
     color: var(--black);
-    background-color: #838b8d1a;
+    background: radial-gradient(circle, #fff 10%, #838b8d1a 50%, #838b8d66 75%, #838b8d 100%);
 }
 
 .container {
     height: 100vh;
     width: 100vw;
     
-    background: radial-gradient(circle, #fff 10%, #838b8d1a 50%, #838b8d66 75%, #838b8d 100%);
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.item {
+    width: 13rem;
+    box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, .6);
+}
+
+.item__image {
+    width: 100%;
+}
+
+.item__cover {
+    line-height: 0;
+    display: none;
+}
+
+.item__back-face {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.song {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.singer {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: .85rem;
+}
+
+.year {
+    font-size: .7rem;
 }
