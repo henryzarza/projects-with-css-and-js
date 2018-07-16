@@ -33,7 +33,7 @@ button {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 2rem;
 }
 
@@ -54,7 +54,7 @@ button {
 }
 
 .item-4 {
-    --item-bg-color: #cfcfcf;
+    --item-bg-color: #FFAB91;
 }
 
 .item-5 {
@@ -63,6 +63,10 @@ button {
 
 .item-6 {
     --item-bg-color: #ecf0f1;
+}
+
+.item-7 {
+    --item-bg-color: #191919;
 }
 
 /* Button 1 */
@@ -350,3 +354,15 @@ button {
     border-left-color: var(--color-button-6);
 }
 /* End button 6 */
+
+@media screen and (max-width: 44rem) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 34rem) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
