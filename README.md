@@ -16,3 +16,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 4. Buttons effects
     - [Codepen](https://codepen.io/HenryZarza/full/gjPeZB/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/buttons-effects)
+5. Cards flip effects
+    - [Codepen](https://codepen.io/HenryZarza/full/BPzNpj/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/cards-flip)
