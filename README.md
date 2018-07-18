@@ -19,3 +19,5 @@ This repository is a compilation of some interesting projects using CSS and JS.
 5. Cards flip effects
     - [Codepen](https://codepen.io/HenryZarza/full/BPzNpj/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/cards-flip)
+6. Spotlight effect
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/spotlight-effect)
