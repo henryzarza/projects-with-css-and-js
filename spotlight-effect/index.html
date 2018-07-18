@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Press and hold the mouse button</h1>
+    <h1 class="title">Press and hold the mouse button</h1>
+    <div class="radio-group">
+        <input class="radio-option" type="radio" name="option" value="circle" id="radioCircle" checked>
+        <label for="radioCircle">circle</label>
+        <input class="radio-option" type="radio" name="option" value="ellipse" id="radioEllipse">
+        <label for="radioEllipse">ellipse</label>
+    </div>
+    <div class="spotlight"></div>
+
+    <script>
+        const spotlight = document.querySelector('.spotlight');
+        let shape = 'circle';
+        let bgSpotlight = 'transparent 9rem, rgba(0, 0, 0, .55) 10rem';
+
+        document.querySelectorAll("[name='option']").forEach(el => el.addEventListener('change', (e) => shape = e.target.value));
+
+        window.addEventListener('mousemove', calculateSpotlight);
+
+        window.addEventListener('mousedown', (e) => {
+            if (e.which === 1) {
+                bgSpotlight = 'transparent 9rem, rgba(0, 0, 0, .95) 10rem';
+                calculateSpotlight(e);
+            }
+        });
+
+        window.addEventListener('mouseup', (e) => {
+            bgSpotlight = 'transparent 9rem, rgba(0, 0, 0, .55) 10rem';
+            calculateSpotlight(e);
+        });
+
+        function calculateSpotlight(event) {
+            spotlight.style.backgroundImage = `radial-gradient(${shape} at ${event.pageX / window.innerWidth * 100}% ${event.pageY / window.innerHeight * 100}%, ${bgSpotlight})`;
+        }
+
+    </script>
 </body>
 </html>
