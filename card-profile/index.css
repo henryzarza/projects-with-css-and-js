@@ -1,7 +1,3 @@
-:root {
-    --link-color: #dd0031;
-}
-
 *, ::after, ::before {
     margin: 0;
     padding: 0;
@@ -10,5 +6,48 @@
 
 body {
     height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-image: linear-gradient(to right bottom, #08244e, #00507e, #007c87, #00a464, #92c227);
+}
+
+.card {
+    width: 30rem;
+    padding: 1rem;
+    border-radius: .3rem;
+    position: relative;
+
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 10rem 1fr;
+
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0,0,0,.5);
+}
+
+.card__photo {
+    display: flex;
+    align-items: center;
+}
+
+.card__photo:before {
+    content: '';
+    top: 0;
+    width: 13rem;
+    height: 13rem;
+    position: absolute;
+
+    background-color: #00a464;
+    transform: skew(-38deg) translateX(-5rem);
+}
+
+.card__photo > img {
+    width: 100%;
+    border-radius: 50%;
+    z-index: 1;
 }
