@@ -1,0 +1,14 @@
+:root {
+    --link-color: #dd0031;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, #08244e, #00507e, #007c87, #00a464, #92c227);
+}
