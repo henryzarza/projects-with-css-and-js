@@ -14,22 +14,40 @@
         <div class="card__photo">
             <img src="http://insideout-penpals.com/wp-content/uploads/2017/09/model02-300x300.png" alt="User">
         </div>
-        <div class="card__content">
-            <h1>John Doe Rockstar</h1>
-            <h3>Rockstar developer</h3>
+        <div>
+            <h1 class="card__title">John Doe Rockstar</h1>
+            <h3 class="card__subtitle">Rockstar developer</h3>
             <p class="content__biography">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi totam animi consequuntur dicta vel, veritatis illo quasi cum tempora delectus aliquid laboriosam nam exercitationem repellendus qui ab. Quas, quibusdam.
+                Est modi totam animi consequuntur dicta vel, veritatis illo quasi cum tempora delectus aliquid laboriosam nam exercitationem repellendus qui ab. Quas, quibusdam.
             </p>
-            <!-- <div class="card__footer">
-                <i class="fab fa-js"></i>
-                <i class="fab fa-react"></i>
-                <i class="fab fa-vuejs"></i>
-                <i class="fab fa-angular"></i>
-                <i class="fab fa-node"></i>
-                <i class="fab fa-sass"></i>
-                <i class="fab fa-css3-alt"></i>
-            </div> -->
         </div>
     </div>
+    <div class="card__footer">
+        <i class="fab fa-js" title="JavaScript"></i>
+        <i class="fab fa-react" title="React"></i>
+        <i class="fab fa-vuejs" title="Vue"></i>
+        <i class="fab fa-angular" title="Angular"></i>
+        <i class="fab fa-node" title="Nodejs"></i>
+        <i class="fab fa-sass" title="Sass"></i>
+        <i class="fab fa-css3-alt" title="CSS3"></i>
+        <i class="fab fa-aws" title="Amazon"></i>
+        <i class="fab fa-gulp" title="Gulp"></i>
+        <i class="fab fa-grunt" title="Grunt"></i>
+    </div>
+
+    <script>
+        const card = document.querySelector('.card');
+        const card_footer = document.querySelector('.card__footer');
+
+        card.addEventListener('click', () => {
+            const { bottom } = card.getBoundingClientRect();
+            card_footer.classList.toggle('card__footer--visible');
+
+            if (card_footer.classList.contains('card__footer--visible'))
+                card_footer.style.top = `${bottom}px`;
+            else 
+                card_footer.style.top = `50vh`;            
+        });
+    </script>
 </body>
 </html>

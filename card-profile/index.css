@@ -1,4 +1,6 @@
-*, ::after, ::before {
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,6 +9,7 @@
 body {
     height: 100vh;
     width: 100vw;
+    font-family: 'Lora', serif;
 
     display: flex;
     justify-content: center;
@@ -25,6 +28,8 @@ body {
     grid-gap: 1rem;
     grid-template-columns: 10rem 1fr;
 
+    z-index: 1;
+    cursor: pointer;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0.3rem 0.4rem 0.4rem rgba(0,0,0,.5);
@@ -39,15 +44,57 @@ body {
     content: '';
     top: 0;
     width: 13rem;
-    height: 13rem;
+    height: 15rem;
     position: absolute;
 
     background-color: #00a464;
-    transform: skew(-38deg) translateX(-5rem);
+    transform: skew(-38deg) translateX(-6rem);
 }
 
 .card__photo > img {
     width: 100%;
     border-radius: 50%;
     z-index: 1;
+}
+
+.card__title {
+    font-size: 1.8rem;
+}
+
+.card__subtitle {
+    margin-bottom: 1rem;
+    color: #00a464;
+    font-style: italic;
+}
+
+.card__footer {
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 28rem;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #504a4a;
+    background-color: #fff;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0,0,0,.5);
+
+    will-change: top;
+    transform: scaleY(0);
+    transition: all 370ms ease-in-out;
+}
+
+.card__footer--visible {
+    transform: scaleY(1);
+}
+
+.card__footer > i:hover {
+    color: #00a464;
 }
