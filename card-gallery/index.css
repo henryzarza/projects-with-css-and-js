@@ -1,0 +1,45 @@
+:root {
+    --bg-cover:         #36383f;
+    --white:            #fff;
+    --bg-color:         #4d4e54;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    padding: 1rem;
+    width: 60rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    height: 10rem;
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 54rem) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+        width: 43rem;
+    }
+}
+
+@media screen and (max-width: 44rem) {
+    .content {
+        width: 22rem;
+        grid-template-columns: 1fr;
+    }
+}
