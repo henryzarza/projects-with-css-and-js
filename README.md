@@ -24,3 +24,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 7. Card profile
     - [Codepen](https://codepen.io/HenryZarza/full/oMBLPr/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/card-profile)
+8. Card gallery
+    - [Codepen](https://codepen.io/HenryZarza/full/ajjOPN/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/card-gallery)
