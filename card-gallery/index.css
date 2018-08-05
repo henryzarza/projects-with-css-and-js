@@ -231,6 +231,22 @@ body {
     border-radius: 0;
 }
 
+/* Effect six */
+.card--six .hidden-square {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-cover);
+    transform: translate(-100%, -100%);
+    transition: transform 330ms var(--transition-function);
+}
+
+.card--six:hover .hidden-square {
+    transform: translate(0);
+}
+
 @media screen and (max-width: 54rem) {
     .content {
         grid-template-columns: 1fr 1fr;
