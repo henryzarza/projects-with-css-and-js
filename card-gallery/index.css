@@ -119,6 +119,56 @@ body {
     transform: translate(0);
 }
 
+/* Effect two */
+.card--two .hidden-square {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    top: 0;
+    left: 0;
+    transition: transform 330ms var(--transition-function);
+}
+
+.card--two .hidden-square::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: var(--bg-cover);
+    transition: transform 330ms var(--transition-function);
+}
+
+.card--two .hidden-square:first-of-type {
+    transform: translateY(-100%);
+}
+
+.card--two .hidden-square:last-of-type {
+    transform: translateY(-100%);
+}
+
+.card--two:hover .hidden-square:first-of-type {
+    transform: translateY(300%);
+    transition-delay: 100ms;
+    background-color: var(--bg-cover);
+}
+
+.card--two:hover .hidden-square:first-of-type::before {
+    transform: translateY(-100%);
+    transition-delay: 150ms;
+}
+
+.card--two:hover .hidden-square:last-of-type {
+    transform: translateY(0);
+    transition-delay: 200ms;
+    background-color: var(--bg-cover);
+}
+
+.card--two:hover .hidden-square:last-of-type::before {
+    transform: translateY(100%);
+    transition-delay: 250ms;
+}
+
 @media screen and (max-width: 54rem) {
     .content {
         grid-template-columns: 1fr 1fr;
