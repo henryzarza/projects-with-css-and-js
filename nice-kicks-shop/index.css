@@ -162,6 +162,7 @@ body {
 }
 
 .link-gender {
+  cursor: pointer;
   color: var(--white);
   padding: .3rem .5rem;
   border-radius: .15rem;
@@ -182,7 +183,7 @@ body {
   margin-top: .5rem;
   overflow-x: hidden;
   max-height: 6.5rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .thumbnail-link {
