@@ -27,3 +27,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 8. Card gallery
     - [Codepen](https://codepen.io/HenryZarza/full/ajjOPN/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/card-gallery)
+9. Nice kicks shop
+    - [Codepen](https://codepen.io/HenryZarza/full/QBYxGW/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/nice-kicks-shop)
