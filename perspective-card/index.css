@@ -1,0 +1,54 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(to left bottom, #fdffa9, #d3bf76, #a6844a, #764e25, #451d01);  /* transform-style: preserve-3d; */
+  /* transform: perspective(800px);*/
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  /* perspective: 600px; */
+  position: absolute;
+  width: 100%;
+}
+
+.card {
+  background: #764e25 url('https://cndiweni.files.wordpress.com/2016/03/12068750391.jpg') 36% 50%;
+  background-size: 350%;
+  border-radius: .4rem;
+  height: 30rem;
+  position: relative;
+  width: 20rem;
+}
+
+.card:before {
+  content: '';
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: .4rem;
+  height: 100%;
+  position: absolute;
+  transform: translate(-1rem, 1rem);
+  width: 100%;
+  z-index: -1;
+}
+
+.card-title {
+  bottom: 1rem;
+  color: #FFF;
+  left: 1.5rem;
+  font-size: 2.1rem;
+  position: absolute;
+  text-shadow: 0 .3rem .25rem rgba(0, 0, 0, .9);
+  /* transform: translateZ(0px);
+  transform-style: preserve-3d;
+  overflow: hidden; */
+}
