@@ -11,6 +11,7 @@
   font-family: Helvetica, sans-serif;
   height: 100vh;
   justify-content: center;
+  overflow: hidden;
   perspective: 650px;
   position: absolute;
   width: 100vw;
