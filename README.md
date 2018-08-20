@@ -30,3 +30,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 9. Nice kicks shop
     - [Codepen](https://codepen.io/HenryZarza/full/QBYxGW/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/nice-kicks-shop)
+10. Perspective card
+    - [Codepen](https://codepen.io/HenryZarza/full/VGwyKy/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/perspective-card)
