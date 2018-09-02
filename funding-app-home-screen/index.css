@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 :root {
   --black: #222;
+  --blue: #5055F5;
+  --gray: #A7A5AE;
+  --shadow-color: rgba(0,0,0,.2);
   --white: #FFF;
-  --transition-duration: 350ms;
+  --transition-duration: 290ms;
 }
 
 *, *::after, *::before {
@@ -12,10 +15,11 @@
 }
 
 body {
-  color: var(--black);
+  color: var(--gray);
   background-color: #ebebeb;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
   height: 100vh;
   overflow: hidden;
 }
@@ -27,12 +31,103 @@ body {
   border-top-width: 2.2rem;
   border-radius: .5rem;
   bottom: -1rem;
-  box-shadow: 0.3rem -0.3rem 0.3rem rgba(0,0,0,.2), -0.3rem 0 0.3rem rgba(0,0,0,.2);
+  box-shadow: 0.3rem -0.3rem 0.3rem var(--shadow-color), -0.3rem 0 0.3rem var(--shadow-color);
   height: 90vh;
   margin: 0 auto;
   max-width: 100%;
   left: 0;
   position: absolute;
   right: 0;
-  width: 20rem;
+  width: 22rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: .3rem;
+  box-shadow: .2rem .2rem .1rem var(--shadow-color);
+  margin: 3rem auto 0;
+  padding: 1rem;
+  width: 90%;
+}
+
+.card-title {
+  color: var(--black);
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.control-form {
+  margin-bottom: 1rem;
+}
+
+.control-form label {
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.control-form input {
+  border: .05rem solid #D9DBF1;
+  border-radius: .25rem;
+  display: block;
+  font-size: 1rem;
+  margin-top: .3rem;
+  padding: .5rem;
+  outline: none;
+  transition: box-shadow var(--transition-duration) ease-in;
+  width: 100%;
+}
+
+.control-form input:focus {
+  border-color: var(--blue);
+  box-shadow: .1rem .1rem .1rem var(--blue), -.1rem -.1rem .1rem var(--blue);
+}
+
+.link {
+  color: var(--blue);
+  display: block;
+  font-size: .8rem;
+  font-weight: bold;
+  text-align: right;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem auto 0;
+  padding: .2rem;
+  outline: none;
+  text-transform: uppercase;
+  transition: all var(--transition-duration) ease-in;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  color: var(--blue);
+}
+
+.button-sign-in {
+  transform: scale(0);
+}
+
+.button-sign-in.complete {
+  transform: scale(1);
+}
+
+.create-new {
+  box-shadow: 0.2rem 0.6rem .1rem var(--shadow-color);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  transform: scale(.93);
 }
