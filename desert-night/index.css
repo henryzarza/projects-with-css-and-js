@@ -1,7 +1,3 @@
-:root {
-  --gray: #A7A5AE;
-}
-
 * {
   box-sizing: border-box;
   line-height: 0;
@@ -10,7 +6,7 @@
 }
 
 body {
-  background-color: var(--gray);
+  background-color: #A7A5AE;
   overflow-x: hidden;
 }
 
