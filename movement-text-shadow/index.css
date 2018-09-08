@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+:root {
+  --green: #23AB0A;
+  --gray-dark: #383636;
+  --shadow-color: rgba(0,0,0,.4);
+  --text-shadow-x: .2rem;
+  --text-shadow-y: .2rem;
+  --white: #FFF;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to left bottom, #1a1a1a, #212121, #282828, #2f2f2f, #373636);
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.title {
+  color: var(--gray-dark);
+  font-size: 15rem;
+  text-shadow: var(--text-shadow-x) var(--text-shadow-y) .1rem var(--shadow-color);
+  user-select: none;
+}
+
+.subtitle {
+  color: var(--green);
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.link {
+  background-color: var(--green);
+  border-radius: .25rem;
+  box-shadow: .2rem .2rem .1rem var(--shadow-color);
+  color: var(--white);
+  cursor: pointer;
+  padding: .35rem .8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: .1rem .1rem .1rem var(--shadow-color);
+  transition: all 330ms;
+}
+
+.link:hover, .link:active, .link:focus {
+  box-shadow: .5rem .5rem .1rem var(--shadow-color);
+}
