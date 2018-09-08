@@ -1,0 +1,63 @@
+:root {
+  --gray: #A7A5AE;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--gray);
+  overflow-x: hidden;
+}
+
+.font {
+  animation: movementDesert 8s linear infinite;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-15rem);
+}
+
+.content {
+  left: 20%;
+  position: absolute;
+  top: 5%;
+  width: 30rem;
+}
+
+.moon {
+  width: 100%;
+}
+
+.tumbleweed {
+  animation: movementTumbleweed 1s linear infinite;
+  bottom: 2.5rem;
+  position: absolute;
+  right: 6rem;
+  width: 7.5rem;
+}
+
+@keyframes movementTumbleweed {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes movementDesert {
+  from { transform: translateX(-15rem); }
+  to { transform: translateX(-86rem);; }
+}
+
+@media only screen and (max-width: 40rem) {
+  .content {
+    width: 20rem;
+  }
+
+  .tumbleweed {
+    bottom: 1.5rem;
+    right: 3.5rem;
+    width: 5.5rem;
+  }
+}
