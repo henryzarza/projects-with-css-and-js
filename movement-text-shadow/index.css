@@ -74,3 +74,13 @@ body {
 .link:hover, .link:active, .link:focus {
   box-shadow: .5rem .5rem .1rem var(--shadow-color);
 }
+
+@media only screen and (max-width: 30rem) {
+  .title {
+    font-size: 8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
