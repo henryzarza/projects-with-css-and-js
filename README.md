@@ -36,3 +36,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 11. Desert night (Test animation)
     - [Codepen](https://codepen.io/HenryZarza/full/LJOJpJ/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/desert-night)
+12. Movement text shadow
+    - [Codepen](https://codepen.io/HenryZarza/full/KxRpeq/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/movement-text-shadow)
