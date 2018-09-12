@@ -6,6 +6,8 @@
   --shadow-color: rgba(0,0,0,.4);
   --text-shadow-x: .2rem;
   --text-shadow-y: .2rem;
+  --text-brightness-x: 0;
+  --text-brightness-y: 0;
   --white: #FFF;
 }
 
@@ -32,8 +34,22 @@ body {
 .title {
   color: var(--gray-dark);
   font-size: 15rem;
+  position: relative;
   text-shadow: var(--text-shadow-x) var(--text-shadow-y) .1rem var(--shadow-color);
   user-select: none;
+}
+
+.title::before {
+  background-image: radial-gradient(circle closest-side, #ffffff33, transparent);
+  background-position: var(--text-brightness-x) var(--text-brightness-y);
+  background-repeat: no-repeat;
+  color: transparent;
+  content: '404';
+  position: absolute;
+  text-shadow: none;
+  top: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .subtitle {

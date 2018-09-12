@@ -17,7 +17,7 @@
   <script>
     const container = document.querySelector('.container');
     const title = document.querySelector('.title');
-    const walk = 100;
+    const walk = 70;
 
     function shadow(e) {
       const { offsetWidth: width, offsetHeight: height } = container;
@@ -33,6 +33,15 @@
       title.style.setProperty('--text-shadow-y', `${yWalk}px`);
     }
 
+    function brightness(e) {
+      const xWalk = e.pageX - window.innerWidth/2;
+      const yWalk = e.pageY - window.innerHeight/2;
+      
+      title.style.setProperty('--text-brightness-x', `${xWalk}px`);
+      title.style.setProperty('--text-brightness-y', `${yWalk}px`);
+    }
+
+    title.addEventListener('mousemove', brightness);
     container.addEventListener('mousemove', shadow);
   </script>
 </body>
