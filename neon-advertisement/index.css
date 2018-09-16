@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
 :root {
+  --color-neon: #000;
+  --color-text: #FFF;
   --white: #FFF;
 }
 
@@ -15,7 +17,6 @@ body {
   background-image: url('https://s1.1zoom.ru/big0/857/347265-admin.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--white);
   display: flex;
   font-family: 'Merienda', cursive;
   height: 100vh;
@@ -28,14 +29,43 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.title {
-  color: var(--gray-dark);
-  font-size: 15rem;
-  position: relative;
-  text-shadow: var(--text-shadow-x) var(--text-shadow-y) .1rem var(--shadow-color);
+  line-height: 1.2;
   user-select: none;
 }
 
-@media only screen and (max-width: 30rem) {}
+.text {
+  animation: pulse 1.3s ease-in-out infinite alternate;
+  color: var(--color-text);
+}
+
+.text-small {
+  --color-neon: #FC3E9F;
+  font-size: 1.5rem;
+}
+
+.text-medium {
+  --color-text: #BA01FF;
+  --color-neon: #FF00DE;
+  font-size: 2.3rem;
+}
+
+.text-big {
+  --color-text: #B6FF00;
+  --color-neon: #B6FF00;
+  font-size: 4.5rem;
+}
+
+.text-xbig {
+  --color-text: #FFDD1B;
+  --color-neon: #FFDD1B;
+  font-size: 7rem;
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 10px var(--white), 0 0 20px var(--white), 0 0 30px var(--white), 0 0 40px var(--color-neon), 0 0 70px var(--color-neon), 0 0 80px var(--color-neon), 0 0 100px var(--color-neon), 0 0 150px var(--color-neon);
+  }
+  to {
+    text-shadow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 15px var(--white), 0 0 20px var(--color-neon), 0 0 35px var(--color-neon), 0 0 40px var(--color-neon), 0 0 50px var(--color-neon), 0 0 75px var(--color-neon);
+  }
+}
