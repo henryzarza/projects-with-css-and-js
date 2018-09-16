@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parallax cards</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1 class="title">The Seasons</h1>
+  <div class="content-cards">
+    <div class="card">
+      <h2 class="card-title">Spring</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="card">
+      <h2 class="card-title">Summer</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="card">
+      <h2 class="card-title">Fall</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="card">
+      <h2 class="card-title">Winter</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  </div>
+
+  <!-- <script>
+    const wrapper = document.querySelector('.wrapper');
+    const card = document.querySelector('.card');
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
+    let mousePosition = { x: 0, y: 0 };
+
+    wrapper.addEventListener('mousemove', (e) => {
+      mousePosition.x = e.pageX;
+      mousePosition.y = e.pageY;
+      const angleX = -1 * (mousePosition.y * 100 / windowHeight * 0.2 - 10) + 'deg',
+        angleY = 1 * (mousePosition.x * 100 / windowWidth * 0.2 - 10) + 'deg',
+        translateX = (mousePosition.x * 100 / windowHeight * 0.3 ) + 'px',
+        translateY = (mousePosition.y * 100 / windowHeight * 0.3 ) + 'px';
+      
+      card.style.transform = `translate3d(${translateX}, ${translateY}, 0) rotatex(${angleX}) rotatey(${angleY})`;
+      card.style.backgroundPosition = `${( mousePosition.x / windowWidth) * 100}% ${(mousePosition.y / windowHeight) * 50}%`;
+      card.style.boxShadow = `${(mousePosition.x - (windowWidth / 2)) * -0.05}px ${(mousePosition.y - (windowHeight / 2)) * -0.05}px .5em rgba(0, 0, 0, .1)`;
+    });
+  </script> -->
+</body>
+</html>
