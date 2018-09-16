@@ -39,3 +39,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 12. Movement text shadow
     - [Codepen](https://codepen.io/HenryZarza/full/KxRpeq/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/movement-text-shadow)
+13. Neon Advertisement
+    - [Codepen](https://codepen.io/HenryZarza/full/ZMMRZO/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/neon-advertisement)
