@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+:root {
+  --transition-function: cubic-bezier(0.23, 1, 0.32, 1);
+  --white: #FFF;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -11,22 +16,45 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-/* .card {
-  background: #764e25 url('https://cndiweni.files.wordpress.com/2016/03/12068750391.jpg') 36% 50%;
-  background-size: 250%;
+.title {
+  color: #5D4037;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container {
+  border: 1pt solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  max-width: 100%;
+  padding: 1rem;
+  width: 42rem;
+}
+
+.card-wrap {
+  flex-basis: 17rem;
+  margin: 1rem;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  background: var(--white) url('https://cndiweni.files.wordpress.com/2016/03/12068750391.jpg') 50% 50%;
   border-radius: .4rem;
-  box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, .1);
-  height: 30rem;
+  cursor: pointer;
+  box-shadow: rgba(black, 0.66) 0 2.2rem 4.4rem 0, inset #333 0 0 0 .5rem, inset rgba(var(--white), 0.5) 0 0 0 .55rem;
+  height: 20rem;
+  overflow: hidden;
   position: relative;
-  width: 20rem;
+  transition: all 1s var(--transition-function);
 }
 
 .card-title {
   bottom: 1rem;
-  color: #FFF;
+  color: var(--white);
   left: 1.5rem;
   font-size: 2.1rem;
   position: absolute;
-  text-shadow: 0 .3rem .25rem rgba(0, 0, 0, .9);
 }
- */
