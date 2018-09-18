@@ -58,11 +58,11 @@
       mousePosition.y = e.pageY;
       const angleX = -1 * (mousePosition.y * 100 / containerHeight * 0.2 - 10) + 'deg',
         angleY = 1 * (mousePosition.x * 100 / containerWidth * 0.2 - 10) + 'deg',
-        translateX = (mousePosition.x * 100 / containerHeight * 0.3 ) + 'px',
-        translateY = (mousePosition.y * 100 / containerHeight * 0.3 ) + 'px';
+        translateX = (mousePosition.x * 80 / containerHeight * 0.3 ) + 'px',
+        translateY = (mousePosition.y * 80 / containerHeight * 0.3 ) + 'px';
       
       this.style.transform = `translate3d(${translateX}, ${translateY}, 0) rotatex(${angleX}) rotatey(${angleY})`;
-      card.style.backgroundPosition = `${( mousePosition.x / containerWidth) * 75}% ${(mousePosition.y / containerHeight) * 50}%`;
+      card.style.backgroundPosition = `${( mousePosition.x / containerWidth) * 50}% ${(mousePosition.y / containerHeight) * 50}%`;
       })
     );
 
