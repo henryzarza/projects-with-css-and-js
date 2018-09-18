@@ -42,3 +42,6 @@ This repository is a compilation of some interesting projects using CSS and JS.
 13. Neon Advertisement
     - [Codepen](https://codepen.io/HenryZarza/full/ZMMRZO/)
     - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/neon-advertisement)
+14. Parallax cards
+    - [Codepen](https://codepen.io/HenryZarza/full/ZMmRMd/)
+    - [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/parallax-cards)
