@@ -44,6 +44,7 @@ body {
 
 .section:last-of-type {
   background-color: var(--dark-blue);
+  justify-content: center;
 }
 
 /* Second section */
@@ -107,4 +108,48 @@ body {
 .item-link:hover,
 .item-link:active {
   text-decoration: line-through;
+}
+
+/* Third section */
+.img-container {
+  border: 0.08rem dashed var(--white);
+  height: 19rem;
+  position: relative;
+  width: 19rem;
+}
+
+.img-container::before {
+  animation: rotate 15s linear infinite;
+  border: 0.08rem dashed var(--white);
+  border-radius: 50%;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.photo-animation {
+  animation: morph 4s ease-in-out infinite alternate;
+  border-radius: 51% 49% 16% 84% / 88% 72% 28% 12%;
+  width: 100%;
+}
+
+@keyframes morph {
+  from {
+    border-radius: 51% 49% 97% 3% / 11% 18% 82% 89%;
+  }
+  to {
+    border-radius: 51% 49% 16% 84% / 88% 72% 28% 12%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0) scale(1.44);
+  }
+  to {
+    transform: rotate(360deg) scale(1.44);
+  }
 }
