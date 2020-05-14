@@ -21,3 +21,4 @@ This repository is a compilation of some interesting projects and test using CSS
 | Neon Advertisement | [Github](https://bit.ly/2WnnSlA) | [Codepen](https://codepen.io/HenryZarza/full/ZMMRZO/) |
 | Parallax cards | [Github](https://bit.ly/2zpn5Yv) | [Codepen](https://codepen.io/HenryZarza/full/ZMmRMd/) |
 | Border radius test | [Github](https://bit.ly/2YNMOo2) | [Codepen](https://codepen.io/HenryZarza/full/KKdRbYg) |
+| Expanding Flex Cards | [Github](https://bit.ly/3cy3Omh) | [Codepen](https://codepen.io/HenryZarza/full/PoPdjJz) |
