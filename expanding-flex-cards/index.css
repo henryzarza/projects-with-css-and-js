@@ -3,11 +3,11 @@
 :root {
   --alabaster: #f8f8f8;
   --white: #fff;
-  --royal-blue: #5866e6;
-  --mandy: #ed5565;
-  --persimmon: #fc6e51;
-  --golden-tainoi: #ffce54;
-  --shamrock: #2ecc71;
+  --dark-gray: #303335;
+  --gray: #818c96;
+  --dark-blue: #1f4782;
+  --golden-tainoi: #e9be71;
+  --golden: #ab834c;
 }
 
 *,
@@ -40,12 +40,6 @@ body {
   display: none;
 }
 
-.radio:checked + .content {
-  border-radius: 2rem;
-  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
-  flex: 10;
-}
-
 .content {
   background: var(--white)
     url('https://images.unsplash.com/photo-1524572217604-17e96c89e56f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80')
@@ -54,6 +48,7 @@ body {
   cursor: pointer;
   flex: 1;
   margin-right: 0.8rem;
+  overflow: hidden;
   position: relative;
   transition: all 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
@@ -77,10 +72,6 @@ body {
   width: 2.5rem;
 }
 
-.icon i {
-  text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-
 .content:nth-of-type(2) {
   background-image: url('https://images.unsplash.com/photo-1444384851176-6e23071c6127?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80');
 }
@@ -99,17 +90,51 @@ body {
 }
 
 .content:nth-of-type(2) .icon {
-  color: var(--royal-blue);
+  color: var(--dark-gray);
 }
 
 .content:nth-of-type(3) .icon {
-  color: var(--persimmon);
+  color: var(--dark-blue);
 }
 
 .content:nth-of-type(4) .icon {
-  color: var(--mandy);
+  color: var(--gray);
 }
 
 .content:nth-of-type(5) .icon {
-  color: var(--shamrock);
+  color: var(--golden);
+}
+
+.card-title {
+  bottom: 1.2rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  left: 4.5rem;
+  line-height: 1.1;
+  opacity: 0;
+  position: absolute;
+  text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  transform: translateX(2rem);
+  transition: 290ms cubic-bezier(0.05, 0.61, 0.41, 0.95) 300ms;
+  transition-property: opacity, transform;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+}
+
+/* Effect */
+.radio:checked + .content {
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
+  flex: 10;
+}
+
+.radio:checked + .content > .card-title {
+  opacity: 1;
+  transform: translateX(0);
 }
