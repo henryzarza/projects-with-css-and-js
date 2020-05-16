@@ -1,8 +1,3 @@
-:root {
-  --alabaster: #f8f8f8;
-  --athens-gray: #efeef4;
-}
-
 *,
 ::after,
 ::before {
@@ -12,5 +7,39 @@
 }
 
 body {
-  background-color: var(--athens-gray);
+  background-color: #EFEEF4;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-rows: auto 6rem;
+  height: 100vh;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.gallery-img {
+  min-width: 100vw;
+  object-fit: contain;
+}
+
+.gallery-nav {
+  display: flex;
+}
+
+.gallery-nav-img {
+  cursor: pointer;
+  filter: grayscale(1);
+  height: 100%;
+  object-fit: cover;
+  transition: filter 290ms ease-in-out;
+  width: 100%;
+}
+
+.gallery-nav-img:hover {
+  filter: grayscale(0);
 }

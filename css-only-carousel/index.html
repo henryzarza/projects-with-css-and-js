@@ -4,118 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Only Carousel</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <nav class="lil-nav">
+    <div class="gallery-container">
+      <div class="gallery">
+        <img
+          class="gallery-img"
+          id="image-1"
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+          alt="Yosemite"
+        />
+        <img
+          class="gallery-img"
+          id="image-2"
+          src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+          alt="Autumn"
+        />
+        <img
+          class="gallery-img"
+          id="image-3"
+          src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+          alt="House in the lake"
+        />
+        <img
+          class="gallery-img"
+          id="image-4"
+          src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+          alt="Route"
+        />
+        <img
+          class="gallery-img"
+          id="image-5"
+          src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+          alt="Balloons"
+        />
+        <img
+          class="gallery-img"
+          id="image-6"
+          src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+          alt="Forest"
+        />
+        <img
+          class="gallery-img"
+          id="image-7"
+          src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80"
+          alt="Tuscany"
+        />
+      </div>
+      <nav class="gallery-nav">
         <a href="#image-1">
           <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/kenan-sulayman-FV3M7igu8Fs-unsplash.jpg"
+            class="gallery-nav-img"
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
             alt="Yosemite"
           />
         </a>
         <a href="#image-2">
           <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/anastasia-dulgier-NCFTGtjY3EQ-unsplash.jpg"
-            alt="Houses"
+            class="gallery-nav-img"
+            src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+            alt="Autumn"
           />
         </a>
         <a href="#image-3">
           <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/arnaud-mariat-IPXcUYHeErc-unsplash.jpg"
-            alt="Galaxies"
+            class="gallery-nav-img"
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+            alt="House in the lake"
           />
         </a>
         <a href="#image-4">
           <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/matthew-smith-9CV6WrxxdrM-unsplash.jpg"
-            alt="Motel"
+            class="gallery-nav-img"
+            src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+            alt="Route"
           />
         </a>
         <a href="#image-5">
           <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/vladimir-kondriianenko-bxwzcFy9YwM-unsplash.jpg"
-            alt="Minimalist nightmare"
+            class="gallery-nav-img"
+            src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+            alt="Balloons"
           />
         </a>
         <a href="#image-6">
           <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/jakob-owens-EkxOtUljwhs-unsplash.jpg"
-            alt="Hoops"
+            class="gallery-nav-img"
+            src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+            alt="Forest"
           />
         </a>
         <a href="#image-7">
           <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/tim-bogdanov-4uojMEdcwI8-unsplash.jpg"
-            alt="Gentleman"
-          />
-        </a>
-        <a href="#image-8">
-          <img
-            class="lil-nav__img"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/weston-mackinnon-caUtk0DTiR0-unsplash.jpg"
-            alt="Stuff"
+            class="gallery-nav-img"
+            src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80"
+            alt="Tuscany"
           />
         </a>
       </nav>
-
-      <div class="gallery">
-        <img
-          class="gallery__img"
-          id="image-1"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/kenan-sulayman-FV3M7igu8Fs-unsplash.jpg"
-          alt="Yosemite"
-        />
-        <img
-          class="gallery__img"
-          id="image-2"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/anastasia-dulgier-NCFTGtjY3EQ-unsplash.jpg"
-          alt="Houses"
-        />
-        <img
-          class="gallery__img"
-          id="image-3"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/arnaud-mariat-IPXcUYHeErc-unsplash.jpg"
-          alt="Galaxies"
-        />
-        <img
-          class="gallery__img"
-          id="image-4"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/matthew-smith-9CV6WrxxdrM-unsplash.jpg"
-          alt="Motel"
-        />
-        <img
-          class="gallery__img"
-          id="image-5"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/vladimir-kondriianenko-bxwzcFy9YwM-unsplash.jpg"
-          alt="Minimalist nightmare"
-        />
-        <img
-          class="gallery__img"
-          id="image-6"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/jakob-owens-EkxOtUljwhs-unsplash.jpg"
-          alt="Hoops"
-        />
-        <img
-          class="gallery__img"
-          id="image-7"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/tim-bogdanov-4uojMEdcwI8-unsplash.jpg"
-          alt="Gentleman"
-        />
-        <img
-          class="gallery__img"
-          id="image-8"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/weston-mackinnon-caUtk0DTiR0-unsplash.jpg"
-          alt="Stuff"
-        />
-      </div>
     </div>
   </body>
 </html>
