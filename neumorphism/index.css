@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap');
+
+:root {
+  --cellphone-border-color: #f3f2f2;
+  --cellphone-bg-color: #efeeee;
+  --cellphone-header-bg-color: #f7f6f6;
+  --cellphone-footer-bg-color: #f7f7f7;
+  --cellphone-text-color: #8d95a5;
+  --shadow-color-btn-1: #fff;
+  --shadow-color-btn-2: #babecc;
+  --btn-bg-color: #ebecf0;
+  --btn-color: #c9cad0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #faf9f9;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.cellphone {
+  background-color: var(--cellphone-bg-color);
+  border: 0.7rem solid var(--cellphone-border-color);
+  border-radius: 2rem;
+  box-shadow: 0.4rem 0.4rem 0.6rem rgba(0, 0, 0, 0.1),
+    -0.4rem -0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 42rem;
+  max-width: 23rem;
+  width: 100%;
+}
+
+.cellphone-header {
+  background-color: var(--cellphone-header-bg-color);
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  padding: 1rem;
+}
+
+.user-name {
+  color: var(--cellphone-text-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.header-photo-container {
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
+.photo {
+  border: 0.3rem solid var(--cellphone-bg-color);
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px var(--shadow-color-btn-2);
+  margin-right: 0.6rem;
+  width: 3rem;
+}
+
+.input,
+.button {
+  background-color: var(--btn-bg-color);
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: 0;
+  padding: 1rem;
+  text-shadow: 1px 1px 0 var(--shadow-color-btn-1);
+}
+
+.button {
+  box-shadow: -5px -5px 20px var(--shadow-color-btn-1),
+    5px 5px 20px var(--shadow-color-btn-2);
+  color: var(--btn-color);
+  color: var(--cellphone-text-color);
+  cursor: pointer;
+  font-weight: 700;
+  margin-right: 1rem;
+  position: relative;
+  transition: box-shadow 200ms ease-in-out;
+}
+
+.badget {
+  background-color: #f3a520;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.1rem 0.25rem;
+  position: absolute;
+  right: -0.85rem;
+  text-shadow: none;
+  top: -0.5rem;
+  z-index: 1;
+}
+
+.button:hover {
+  box-shadow: -2px -2px 5px var(--shadow-color-btn-1),
+    2px 2px 5px var(--shadow-color-btn-2);
+}
+
+.button:active {
+  box-shadow: inset 1px 1px 2px var(--shadow-color-btn-2),
+    inset -1px -1px 2px var(--shadow-color-btn-1);
+}
+
+/* .cellphone-content {
+} */
+
+.cellphone-footer {
+  background-color: var(--cellphone-footer-bg-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.no-margin {
+  margin: 0;
+}
