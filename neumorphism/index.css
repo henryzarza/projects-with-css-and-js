@@ -48,6 +48,23 @@ body {
   border-radius: 1rem 1rem 0 0;
   display: flex;
   padding: 1rem;
+  position: relative;
+}
+
+.cellphone-header::before {
+  background: linear-gradient(
+    90deg,
+    #dc4946 0%,
+    #e3923c 35%,
+    #b13b46 70%,
+    #36c270 100%
+  );
+  bottom: -0.5rem;
+  content: '';
+  height: 0.5rem;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 
 .user-name {
@@ -120,7 +137,7 @@ body {
 
 .cellphone-content {
   flex: 1;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem 0.5rem;
 }
 
 .cellphone-footer {
