@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 :root {
   --cellphone-border-color: #f3f2f2;
@@ -89,7 +89,8 @@ body {
 }
 
 .input,
-.button {
+.button,
+.link-social {
   background-color: var(--btn-bg-color);
   border: 0;
   border-radius: 0.5rem;
@@ -135,8 +136,17 @@ body {
     inset -1px -1px 2px var(--shadow-color-btn-1);
 }
 
+.content-btn {
+  border-radius: 1rem;
+  color: #2de15e;
+  margin-bottom: 2rem;
+  margin-right: 0;
+}
+
 .cellphone-content {
+  display: flex;
   flex: 1;
+  flex-direction: column;
   padding: 1rem 0.5rem 0.5rem;
 }
 
@@ -173,4 +183,61 @@ body {
 
 .no-margin {
   margin: 0;
+}
+
+.general-title {
+  color: var(--cellphone-text-color);
+  font-size: 1.2rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.input {
+  box-shadow: inset 4px 4px 8px var(--shadow-color-btn-2),
+    inset -2px -2px 5px var(--shadow-color-btn-1);
+  color: var(--cellphone-text-color);
+  margin-bottom: 1.5rem;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--cellphone-text-color);
+}
+
+.input:-ms-input-placeholder {
+  color: var(--cellphone-text-color);
+}
+
+.input::placeholder {
+  color: var(--cellphone-text-color);
+}
+
+.input:focus {
+  box-shadow: inset 1px 1px 2px var(--shadow-color-btn-2),
+    inset -1px -1px 2px var(--shadow-color-btn-1);
+}
+
+.textarea {
+  height: 5rem;
+  resize: none;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link-social {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.2rem;
+  height: 3rem;
+  justify-content: center;
+  padding: 0;
+  text-decoration: none;
+  width: 3rem;
 }
