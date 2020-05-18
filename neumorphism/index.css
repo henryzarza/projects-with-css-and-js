@@ -12,6 +12,18 @@
   --btn-color: #c9cad0;
 }
 
+.dark {
+  --cellphone-border-color: #1a1c25;
+  --cellphone-bg-color: #202231;
+  --cellphone-header-bg-color: #212435;
+  --cellphone-footer-bg-color: #26293c;
+  --cellphone-text-color: #8e96a6;
+  --shadow-color-btn-1: #181515;
+  --shadow-color-btn-2: #2e2f3d;
+  --btn-bg-color: #26293d;
+  --btn-color: #fffffe;
+}
+
 *,
 ::after,
 ::before {

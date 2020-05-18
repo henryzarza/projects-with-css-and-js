@@ -57,10 +57,23 @@
         <button type="button" class="button footer-btn">
           <i class="fas fa-exchange-alt"></i>
         </button>
-        <button type="button" class="button footer-btn no-margin">
+        <button
+          type="button"
+          class="button footer-btn no-margin"
+          id="change-color"
+        >
           <i class="fas fa-palette"></i>
         </button>
       </footer>
     </section>
   </body>
+  <script>
+    const cellphone = document.querySelector('.cellphone');
+
+    document
+      .querySelector('#change-color')
+      .addEventListener('click', function () {
+        cellphone.classList.toggle('dark');
+      });
+  </script>
 </html>
