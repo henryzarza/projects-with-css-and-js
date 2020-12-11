@@ -27,9 +27,81 @@ body {
   width: 100%;
 }
 
+/* First section */
 .section-container:first-of-type {
-  background-image: url('https://images.unsplash.com/photo-1494122353634-c310f45a6d3c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3300&q=80');
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1566055909643-a51b4271aa47?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+.card {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.95rem;
+  box-shadow: 1.25rem 1.25rem 2.5rem rgba(0, 0, 0, 0.5);
+  margin: 1.875rem;
+  overflow: hidden;
+  width: 18.5rem;
+}
+
+.card-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 23rem;
+  opacity: 0;
+  padding: 1.35rem;
+  position: relative;
+  transform: translateY(6.25rem);
+  transition: transform 330ms ease-in, opacity 290ms ease-in;
+}
+
+.card:hover .card-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-title {
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 8rem;
+  pointer-events: none;
+  position: absolute;
+  right: 1.75rem;
+  top: -1.875rem;
+}
+
+.card-subtitle {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  z-index: 1;
+}
+
+.card-content {
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: var(--cod-gray);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.5rem 1.1rem;
+  text-decoration: none;
+  transition: background-color 290ms ease-in;
+}
+
+.card-link:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* End first section */
 
 .section-container:nth-of-type(2) {
   background-image: url('https://images.unsplash.com/photo-1584566442413-9234ee5ad754?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
