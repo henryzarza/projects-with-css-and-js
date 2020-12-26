@@ -24,3 +24,4 @@ This repository is a compilation of some interesting projects and test using CSS
 | Expanding Flex Cards | [Github](https://bit.ly/3cy3Omh) | [Codepen](https://codepen.io/HenryZarza/full/PoPdjJz) |
 | Carousel only with CSS | [Github](https://bit.ly/363oZdk) | [Codepen](https://codepen.io/HenryZarza/full/OJyBOPL) |
 | Neumorphism | [Github](https://bit.ly/2ycbifF) | [Codepen](https://codepen.io/HenryZarza/full/yLYQvLw) |
+| Glassmorphism | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/glassmorphism) | [Codepen](https://codepen.io/HenryZarza/full/bGwYKyR) |
