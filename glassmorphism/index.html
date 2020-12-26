@@ -6,49 +6,88 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Glassmorphism</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
   <main class="main-container">
     <section class="section-container">
       <div class="card">
-        <div class="card-container">
-          <h5 class="card-title">01</h5>
-          <h6 class="card-subtitle">Card One</h6>
-          <p class="card-content">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cupiditate soluta iusto tempore nesciunt temporibus ad, tempora nulla rem saepe?
-          </p>
-          <a href="#" class="card-link">Read More</a>
-        </div>
+        <h3 class="card-title">01</h3>
+        <h6 class="card-subtitle">Card One</h6>
+        <p class="card-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cupiditate soluta iusto tempore nesciunt temporibus ad, tempora nulla rem saepe?
+        </p>
+        <a href="#" class="card-link">Read More</a>
       </div>
       <div class="card">
-        <div class="card-container">
-          <h5 class="card-title">02</h5>
-          <h6 class="card-subtitle">Card Two</h6>
-          <p class="card-content">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cupiditate soluta iusto tempore nesciunt temporibus ad, tempora nulla rem saepe?
-          </p>
-          <a href="#" class="card-link">Read More</a>
-        </div>
+        <h3 class="card-title">02</h3>
+        <h6 class="card-subtitle">Card Two</h6>
+        <p class="card-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cupiditate soluta iusto tempore nesciunt temporibus ad, tempora nulla rem saepe?
+        </p>
+        <a href="#" class="card-link">Read More</a>
       </div>
       <div class="card">
-        <div class="card-container">
-          <h5 class="card-title">03</h5>
-          <h6 class="card-subtitle">Card Three</h6>
-          <p class="card-content">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cupiditate soluta iusto tempore nesciunt temporibus ad, tempora nulla rem saepe?
-          </p>
-          <a href="#" class="card-link">Read More</a>
-        </div>
+        <h3 class="card-title">03</h3>
+        <h6 class="card-subtitle">Card Three</h6>
+        <p class="card-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cupiditate soluta iusto tempore nesciunt temporibus ad, tempora nulla rem saepe?
+        </p>
+        <a href="#" class="card-link">Read More</a>
       </div>
     </section>
+
     <section class="section-container">
-      Debit card
+      <div class="person-card">
+        <figure class="person-photo-container">
+          <img class="person-photo" src="https://www.fakepersongenerator.com/Face/male/male20151083734683105.jpg" alt="Fake person" />
+        </figure>
+        <h5 class="person-name">Don Bator</h5>
+        <h6 class="person-role">Creative Designer</h6>
+      </div>
+      <div class="person-card">
+        <figure class="person-photo-container">
+          <img class="person-photo" src="https://www.fakepersongenerator.com/Face/female/female20161024589263306.jpg" alt="Fake person" />
+        </figure>
+        <h5 class="person-name">Stacie Hendricks</h5>
+        <h6 class="person-role">Web developer</h6>
+      </div>
+      <div class="person-card">
+        <figure class="person-photo-container">
+          <img class="person-photo" src="https://www.fakepersongenerator.com/Face/male/male1085796886230.jpg" alt="Fake person" />
+        </figure>
+        <h5 class="person-name">Glen Lund</h5>
+        <h6 class="person-role">Mobile developer</h6>
+      </div>
     </section>
+
     <section class="section-container">
-      Landing
+      <div class="last-container">
+        <div class="left">
+          <h3 class="last-title">Chichén Itzá</h3>
+          <p class="last-description">
+            Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic
+            (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200). The site exhibits a multitude of architectural
+            styles, reminiscent of styles seen in central Mexico and of the Puuc and Chenes styles of the Northern Maya lowlands. The presence of
+            central Mexican styles was once thought to have been representative of direct migration or even conquest from central Mexico, but most
+            contemporary interpretations view the presence of these non-Maya styles more as the result of cultural diffusion.
+          </p>
+        </div>
+        <div class="right">
+          <h2 class="last-big-title">Come to Mexico</h2>
+        </div>
+      </div>
     </section>
   </main>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.min.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll('.card'), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 1
+    });
+  </script>
 </body>
 </html>
