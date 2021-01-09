@@ -25,3 +25,4 @@ This repository is a compilation of some interesting projects and test using CSS
 | Carousel only with CSS | [Github](https://bit.ly/363oZdk) | [Codepen](https://codepen.io/HenryZarza/full/OJyBOPL) |
 | Neumorphism | [Github](https://bit.ly/2ycbifF) | [Codepen](https://codepen.io/HenryZarza/full/yLYQvLw) |
 | Glassmorphism | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/glassmorphism) | [Codepen](https://codepen.io/HenryZarza/full/bGwYKyR) |
+| Media Session API | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/media-session-api) | [Codepen](https://codepen.io/HenryZarza/full/dypjrWZ) |
