@@ -56,7 +56,9 @@ button.primary {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
 }
 
 /* Main section */
@@ -107,7 +109,7 @@ p {
   margin-top: 1.25rem;
 }
 
-/* Features section */
+/* Feature section */
 .feature {
   display: grid;
   gap: 2rem;
@@ -139,8 +141,54 @@ p {
 }
 
 .feature-text {
-  font-size: 1.125rem;
-  line-height: 1.5;
-  letter-spacing: -0.1px;
   text-align: center;
+}
+
+/* Overview section */
+.overview {
+  background-color: var(--shark);
+  padding: 3rem 0;
+}
+
+.overview-content {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2rem;
+  width: var(--width-content);
+}
+
+.overview-item {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+}
+
+.overview-item:last-child {
+  margin-bottom: 3rem;
+}
+
+.overview-img {
+  max-width: 27.75rem;
+  width: 100%;
+}
+
+.overview-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 22.75rem;
+  width: 100%;
+}
+
+.overview-title {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.overview-text {
+  margin-bottom: 1rem;
 }
