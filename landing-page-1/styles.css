@@ -1,23 +1,25 @@
 :root {
   --transition-duration: 290ms;
   --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  --width-content: 75rem;
   /* Colors */
   --azure-radiance: #097DEA;
   --regent-gray: #8A94A7;
   --shark: #242830;
+  --dark-shark: #1D2026;
   --white: #FFF;
 }
 
 * {
   box-sizing: border-box;
   color: var(--regent-gray);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 html {
-  background-color: var(--shark);
+  background-color: var(--dark-shark);
   line-height: 1.4;
   font-size: 16px;
   text-size-adjust: 100%;
@@ -25,36 +27,27 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-section {
-  outline: 1px solid white;
-  min-height: 100vh;
-  width: 100%;
-}
-
 button {
   appearance: none;
   background-color: var(--shark);
   border: none;
   border-radius: 0.125rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
   color: var(--white);
   cursor: pointer;
   font-size: 1rem;
-  letter-spacing: 0;
   font-weight: 600;
   line-height: 1.1;
-  min-height: 3rem;
-  text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   opacity: 1;
-  transition: opacity var(--transition-duration) var(--transition-function);
+  transition: box-shadow var(--transition-duration) var(--transition-function);
   padding: 1rem 2rem;
   white-space: nowrap;
 }
 
 button:hover,
 button:focus {
-  opacity: 0.9;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.65);
 }
 
 button.primary {
@@ -66,12 +59,25 @@ p {
   font-size: 1.2rem;
 }
 
-/* Main content */
+/* Main section */
 .main {
   align-items: center;
   display: flex;
   min-height: 45.25rem;
   position: relative;
+}
+
+.main::before {
+  background: linear-gradient(80deg, rgba(36, 40, 48, 0.85) 0%, rgba(36, 40, 48, 0) 100%);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: skewY(-12deg);
+  transform-origin: 0;
+  z-index: -1;
 }
 
 .main-content {
@@ -101,6 +107,40 @@ p {
   margin-top: 1.25rem;
 }
 
-/* .hero-buttons .primary {
-  margin-right: ;
-} */
+/* Features section */
+.feature {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(20.75rem, 1fr));
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2rem;
+  width: var(--width-content);
+}
+
+.feature-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.feature-img {
+  margin-bottom: 1.5rem;
+  width: 6.25rem;
+}
+
+.feature-title {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.feature-text {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  text-align: center;
+}
