@@ -116,7 +116,7 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(20.75rem, 1fr));
   margin: 0 auto;
   max-width: 100%;
-  padding: 2rem;
+  padding: 2rem 2rem 3rem 2rem;
   width: var(--width-content);
 }
 
@@ -191,4 +191,41 @@ p {
 
 .overview-text {
   margin-bottom: 1rem;
+}
+
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cell {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  flex: 0 1 9.5rem;
+}
+
+.cell i {
+  color: var(--azure-radiance);
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.counter-value {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.counter-info {
+  color: var(--white);
+}
+
+/* Preview section */
+.preview {
+  border: 1px solid red;
+  min-height: 100vh;
 }
