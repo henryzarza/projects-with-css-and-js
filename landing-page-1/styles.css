@@ -225,6 +225,39 @@ p {
 
 /* Preview section */
 .preview {
-  border: 1px solid red;
+  background: url("./assets/video-background.jpeg") var(--azure-radiance) center no-repeat;
+  background-size: cover;
+  display: flex;
   min-height: 100vh;
+  padding: 1rem;
+}
+
+.preview-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 55rem;
+}
+
+.preview-content p {
+  color: var(--white);
+  max-width: 100%;
+  width: 34rem;
+}
+
+.preview-title {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.preview-img {
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  width: 100%;
 }
