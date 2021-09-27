@@ -244,20 +244,26 @@ p {
 
 .preview-content p {
   color: var(--white);
+  margin-bottom: 3rem;
   max-width: 100%;
+  text-align: center;
   width: 34rem;
 }
 
 .preview-title {
   color: var(--white);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.preview-img {
+.preview-video {
   border-radius: 0.5rem;
-  margin-top: 2rem;
+  width: 100%;
+}
+
+.preview-video iframe {
+  aspect-ratio: 16 / 9;
   width: 100%;
 }
