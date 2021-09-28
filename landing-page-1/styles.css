@@ -7,6 +7,7 @@
   --regent-gray: #8A94A7;
   --shark: #242830;
   --dark-shark: #1D2026;
+  --code-gray: #2C3039;
   --white: #FFF;
 }
 
@@ -40,7 +41,7 @@ button {
   line-height: 1.1;
   text-transform: uppercase;
   opacity: 1;
-  transition: box-shadow var(--transition-duration) var(--transition-function);
+  transition: all var(--transition-duration) var(--transition-function);
   padding: 1rem 2rem;
   white-space: nowrap;
 }
@@ -48,6 +49,10 @@ button {
 button:hover,
 button:focus {
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.65);
+}
+
+button:active {
+  transform: scale(0.95);
 }
 
 button.primary {
@@ -266,4 +271,122 @@ p {
 .preview-video iframe {
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+
+/* Pricing section */
+.pricing {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.pricing-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 71.5rem;
+  width: 100%;
+}
+
+.pricing-title {
+  color: var(--white);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.pricing-description {
+  text-align: center;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.pricing-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.pricing-card {
+  align-items: center;
+  background-color: var(--shark);
+  border: 1px solid var(--code-gray);
+  border-radius: 0.25rem;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 19rem;
+  margin: 1rem;
+  overflow: hidden;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.pricing-card h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card p {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-separator {
+  background-color: var(--regent-gray);
+  height: 1px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.pricing-info {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.pricing-info span {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-right: 0.25rem;
+  vertical-align: 40%;
+}
+
+.pricing-frequency {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card ul {
+  flex: 1;
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card ul > li {
+  list-style-type: none;
+}
+
+.pricing-card ul > li > i {
+  color: var(--white);
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.best-price {
+  background-color: var(--azure-radiance);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 3rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transform: rotateZ(45deg) translate(3rem, -0.8rem);
 }
