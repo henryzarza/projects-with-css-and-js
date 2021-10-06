@@ -315,7 +315,7 @@ p {
   align-items: center;
   background-color: var(--shark);
   border: 1px solid var(--code-gray);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -327,8 +327,8 @@ p {
 }
 
 .pricing-card h6 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -373,7 +373,6 @@ p {
 }
 
 .pricing-card ul > li > i {
-  color: var(--white);
   font-size: 0.875rem;
   margin-right: 0.25rem;
 }
@@ -389,4 +388,41 @@ p {
   text-align: center;
   top: 0;
   transform: rotateZ(45deg) translate(3rem, -0.8rem);
+}
+
+/* Testimonials section */
+.testimonials {
+  background-color: var(--shark);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 7rem 1rem;
+}
+
+.testimonial {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 15.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  max-width: 100%;
+  width: 10rem;
+}
+
+.testimonial-review {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.testimonial-author {
+  color: var(--white);
+  font-weight: 500;
 }
