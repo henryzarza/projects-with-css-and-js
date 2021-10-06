@@ -426,3 +426,33 @@ p {
   color: var(--white);
   font-weight: 500;
 }
+
+/* Team section */
+.team {
+  align-items: center;
+  display: flex;
+  padding: 8rem 1rem;
+}
+
+.team-member {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 15rem;
+  padding: 2rem;
+}
+
+.team-member img {
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.member-role {
+  font-weight: 300;
+}
