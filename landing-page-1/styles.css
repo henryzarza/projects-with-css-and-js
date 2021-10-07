@@ -456,3 +456,71 @@ p {
 .member-role {
   font-weight: 300;
 }
+
+/* Footer */
+footer {
+  background-color: #212529;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 1rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  margin: 0 auto;
+  max-width: 60rem;
+  width: 100%;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+
+.footer-item:last-of-type {
+  margin-right: 0;
+}
+
+.footer-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footer-higligh {
+  font-weight: 500;
+}
+
+.footer-buttons {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.footer-buttons button {
+  align-items: center;
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 2.75rem;
+  transition: background-color 290ms ease-in;
+  width: 2.75rem;
+}
+
+.footer-buttons button:hover {
+  background-color: var(--azure-radiance);
+}
+
+.footer-buttons button i {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.footer-title {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  text-align: center;
+}
