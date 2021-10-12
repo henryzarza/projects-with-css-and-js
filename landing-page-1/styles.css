@@ -550,3 +550,35 @@ footer {
   margin-top: 3rem;
   text-align: center;
 }
+
+/* Button */
+.btn-goto {
+  align-items: center;
+  background-color: var(--azure-radiance);
+  border-radius: 50%;
+  bottom: 2rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  height: 3rem;
+  padding: 0;
+  position: fixed;
+  right: 2rem;
+  transition: background-color 290ms ease-in;
+  width: 3rem;
+  z-index: 2;
+}
+
+.btn-goto i {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.btn-goto.show {
+  display: flex;
+}
+
+.btn-goto:hover {
+  background-color: var(--code-gray);
+}
