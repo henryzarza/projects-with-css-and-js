@@ -393,10 +393,13 @@ p {
 /* Testimonials section */
 .testimonials {
   background-color: var(--shark);
-  display: flex;
+  padding: 7rem 1rem;
+}
+
+.testimonials .pricing-content {
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 7rem 1rem;
 }
 
 .testimonial {
