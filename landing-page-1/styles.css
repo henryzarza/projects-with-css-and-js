@@ -71,6 +71,7 @@ p {
   align-items: center;
   display: flex;
   min-height: 45.25rem;
+  overflow: hidden;
   position: relative;
 }
 
@@ -631,4 +632,32 @@ nav {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--azure-radiance);
+}
+
+/* Main animation */
+.img-animation-1 {
+  animation: rotateAndGrow 330ms ease-in-out 1s forwards;
+  max-width: 30rem;
+  position: absolute;
+  right: 0;
+  top: 6rem;
+  transform: scale(0);
+  width: 100%;
+}
+
+@keyframes rotateAndGrow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.img-animation-2 {
+  position: absolute;
+  max-width: 32rem;
+  right: 2rem;
+  top: 5rem;
+  width: 100%;
 }
