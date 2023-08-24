@@ -27,3 +27,4 @@ This repository is a compilation of some interesting projects and test using CSS
 | Glassmorphism | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/glassmorphism) | [Codepen](https://codepen.io/HenryZarza/full/bGwYKyR) |
 | Media Session API | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/media-session-api) | [Codepen](https://codepen.io/HenryZarza/full/dypjrWZ) |
 | Futuristic Cards | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/futuristic-cards) | [Codepen](https://codepen.io/HenryZarza/full/NWEMPgo) |
+| Elastic Accordion Cards | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/elastic-accordion) | [Codepen](https://codepen.io/HenryZarza/full/abPvojX) |
