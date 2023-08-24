@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-image: linear-gradient(
+    135deg,
+    hsl(16deg 62% 86%) 0%,
+    hsl(9deg 58% 86%) 21%,
+    hsl(2deg 55% 85%) 30%,
+    hsl(354deg 54% 84%) 39%,
+    hsl(347deg 54% 83%) 46%,
+    hsl(341deg 55% 82%) 54%,
+    hsl(336deg 55% 80%) 61%,
+    hsl(332deg 55% 79%) 69%,
+    hsl(327deg 55% 78%) 79%,
+    hsl(324deg 56% 76%) 100%
+  );
+  display: flex;
+  font-family: 'Dancing Script', cursive;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.main {
+  display: flex;
+  height: 39rem;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 25rem;
+}
+
+.card-radio {
+  display: none;
+}
+
+.card-content {
+  background: #FFF
+    url('https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/levitating_jsi0xb.jpg')
+    100% / cover no-repeat;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.card-content:nth-of-type(2) {
+  background-image: url('https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/no-lie_v6i2tj.jpg');
+}
+
+.card-content:nth-of-type(3) {
+  background-image: url('https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883897/begging_jldwdw.png');
+}
+
+.card-content:nth-of-type(4) {
+  background-image: url('https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/be-the-one_rlr5mx.jpg');
+}
+
+.card-content:last-of-type {
+  background-image: url('https://res.cloudinary.com/dcqu0udnd/image/upload/v1692176147/transition-api/dua-lipa_nlhzem.jpg');
+}
+
+.card-title {
+  align-items: center;
+  background-color: rgb(0 0 0 / 35%);
+  color: #FFF;
+  display: flex;
+  font-size: 2.2rem;
+  inset: 0;
+  justify-content: center;
+  line-height: 1.1;
+  position: absolute;
+  transition: all 290ms cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+/* Effect */
+.card-content:is(:hover, :focus) {
+  box-shadow: 3px 3px 6px rgb(0 0 0 / 25%);
+}
+
+.card-content:is(:hover, :focus) .card-title {
+  background-color: rgb(0 0 0 / 5%);
+}
+
+.card-radio:checked + .card-content {
+  animation: elastic 500ms cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+  border-radius: 0;
+  box-shadow: 5px 5px 6px rgb(0 0 0 / 25%);
+  flex: 10;
+}
+
+.card-radio:checked + .card-content > .card-title {
+  background-color: rgb(0 0 0);
+  top: 87%;
+}
+
+@keyframes elastic {
+  0% { flex: 1; }
+  30% { flex: 5; }
+  40% { flex: 4.5; }
+  50% { flex: 7; }
+  60% { flex: 6; }
+  70% { flex: 8.5; }
+  80% { flex: 7.5; }
+  100% { flex: 10; }
+}
