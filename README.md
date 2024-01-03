@@ -16,7 +16,7 @@ This repository is a compilation of some interesting projects and test using CSS
 | Card gallery | [Github](https://bit.ly/3dzv8Ax) | [Codepen](https://codepen.io/HenryZarza/full/ajjOPN/) |
 | Nice kicks shop | [Github](https://bit.ly/2zqU2DJ) | [Codepen](https://codepen.io/HenryZarza/full/QBYxGW/) |
 | Perspective card | [Github](https://bit.ly/2zuYrp6) | [Codepen](https://codepen.io/HenryZarza/full/VGwyKy/) |
-| Desert night (Test animation) | [Github](https://bit.ly/35VEunF) | [Codepen](https://codepen.io/HenryZarza/full/LJOJpJ/) |
+| Desert night (Test animation) | [Github](https://bit.ly/35VEunF) |  |
 | Text shadow movement | [Github](https://bit.ly/3cloIVG) | [Codepen](https://codepen.io/HenryZarza/full/KxRpeq/) |
 | Neon Advertisement | [Github](https://bit.ly/2WnnSlA) | [Codepen](https://codepen.io/HenryZarza/full/ZMMRZO/) |
 | Parallax cards | [Github](https://bit.ly/2zpn5Yv) | [Codepen](https://codepen.io/HenryZarza/full/ZMmRMd/) |
