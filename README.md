@@ -1,6 +1,6 @@
 # pojects-with-css-and-js
 
-This repository is a compilation of some interesting projects and test using CSS and JS.
+This repository is a compilation of some interesting interactions, animations, transitions, and UX/UI made by myself ([Henry Zarza](https://henryzarza.vercel.app/)) using CSS and vanilla JavaScript.
 
 ## Projects
 
@@ -28,3 +28,4 @@ This repository is a compilation of some interesting projects and test using CSS
 | Media Session API | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/media-session-api) | [Codepen](https://codepen.io/HenryZarza/full/dypjrWZ) |
 | Futuristic Cards | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/futuristic-cards) | [Codepen](https://codepen.io/HenryZarza/full/NWEMPgo) |
 | Elastic Accordion Cards | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/elastic-accordion) | [Codepen](https://codepen.io/HenryZarza/full/abPvojX) |
+| Modern Menu | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/modern-menu) | [Codepen](https://codepen.io/HenryZarza/full/RwdrjYw) |
