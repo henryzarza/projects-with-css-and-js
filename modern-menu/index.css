@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  cursor: none;
+  overflow: hidden;
+}
+
+.nav {
+  align-items: center;
+  background-color: #1D1E22;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.nav-list,
+.nav-list__item {
+  list-style: none;
+}
+
+.nav-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nav-list__item a {
+  color: #FFF;
+  cursor: none;
+  font-size: 3rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 500ms;
+}
+
+.nav-list__item a::before {
+  color: transparent;
+  content: attr(data-text);
+  font-size: clamp(2rem, 8rem, 15vw);
+  left: var(--x);
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  transition: opacity 200ms;
+  white-space: nowrap;
+  -webkit-text-stroke: 2px #FFF;
+}
+
+@supports not (-webkit-text-stroke: 1px #FFF) {
+  .nav-list__item a::before {
+    text-shadow:
+       3px  3px 0 #FFF,
+      -2px -2px 0 #FFF,  
+       2px -2px 0 #FFF,
+      -2px  2px 0 #FFF,
+       2px  2px 0 #FFF;
+  }
+}
+
+.nav-list__item img {
+  left: var(--x);
+  pointer-events: none;
+  position: absolute;
+  top: var(--y);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 200ms;
+}
+
+.cursor {
+  border: 0.2rem solid #2DDDEA;
+  border-radius: 50%;
+  height: 2rem;
+  left: var(--window-x);
+  pointer-events: none;
+  position: absolute;
+  top: var(--window-y);
+  transform: translate(-50%, -50%);
+  transition: background-color 280ms;
+  width: 2rem;
+}
+
+.cursor::before {
+  border: 0.2rem solid #2DDDEA;
+  border-radius: 50%;
+  content: '';
+  height: 30rem;
+  inset: 0;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 280ms;
+  width: 30rem;
+}
+
+/* Effect */
+.nav-list:is(:hover, :focus) a {
+  opacity: 0.1;
+}
+
+.nav-list__item:is(:hover, :focus) a {
+  opacity: 1;
+}
+
+.nav-list__item:is(:hover, :focus) img {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.nav-list__item:is(:hover, :focus) a::before {
+  opacity: 1;
+}
+
+.nav-list:is(:hover, :focus) + .cursor {
+  background-color: #2DDDEA;
+  border-color: #1D1E22;
+}
+
+.nav-list:is(:hover, :focus) + .cursor::before {
+  transform: translate(-50%, -50%) scale(1);
+}

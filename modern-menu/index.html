@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Menu | Henry Zarza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <img src="https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/levitating_jsi0xb.jpg" width="250" height="250" alt="Levitating single cover">
+          <a href="#" data-text="Levitating">Levitating</a>
+        </li>
+        <li class="nav-list__item">
+          <img src="https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/no-lie_v6i2tj.jpg" width="250" height="250" alt="No Lie single cover">
+          <a href="#" data-text="No Lie">No Lie</a>
+        </li>
+        <li class="nav-list__item">
+          <img src="https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883897/begging_jldwdw.png" width="250" height="250" alt="Begging single cover">
+          <a href="#" data-text="Begging">Begging</a>
+        </li>
+        <li class="nav-list__item">
+          <img src="https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/be-the-one_rlr5mx.jpg" width="250" height="250" alt="Be The One single cover">
+          <a href="#" data-text="Be The One">Be The One</a>
+        </li>
+        <li class="nav-list__item">
+          <img src="https://res.cloudinary.com/dcqu0udnd/image/upload/v1692176147/transition-api/dua-lipa_nlhzem.jpg" width="250" height="250" alt="Love Again single cover">
+          <a href="#" data-text="Love Again">Love Again</a>
+        </li>
+      </ul>
+      <div class="cursor"></div>
+    </nav>
+  </body>
+
+  <script>
+    const navRef = document.querySelector('.nav-list');
+    const bodyRef = document.querySelector('body');
+
+    navRef.addEventListener('mousemove', (event) => {
+      navRef.style.setProperty('--x', `${event.clientX}px`);
+      navRef.style.setProperty('--y', `${event.clientY}px`)
+    });
+
+    bodyRef.addEventListener('mousemove', (event) => {
+      bodyRef.style.setProperty('--window-x', `${event.clientX}px`);
+      bodyRef.style.setProperty('--window-y', `${event.clientY}px`)
+    });
+  </script>
+</html>
