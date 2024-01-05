@@ -1,6 +1,9 @@
 :root {
   --white: #FFF;
   --cocacola-red: #F40103;
+  --sprite-green: #01A759;
+  --sprite-yellow: #FFE836;
+  --sprite-blue: #042F71;
   --cod-gray: #151515;
   --cod-gray-2: #191919;
 }
@@ -17,11 +20,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.title,
-.card-title {
-  font-family: 'Dancing Script', cursive;
-}
-
 section {
   align-items: center;
   display: flex;
@@ -30,9 +28,33 @@ section {
 }
 
 .card-title {
+  font-family: 'Dancing Script', cursive;
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.1;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card-link {
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 330ms ease-in-out;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  pointer-events: none;
+  position: absolute;
 }
 
 /* Coca Cola section */
@@ -45,7 +67,6 @@ section {
     background-color: var(--cod-gray-2);
     border: 0.3rem solid var(--cocacola-red);
     border-radius: 50%;
-    display: flex;
     filter: drop-shadow(0 0 0.85rem var(--cocacola-red)) drop-shadow(0 0 3.75rem var(--cocacola-red));
     height: 21rem;
     max-width: 100%;
@@ -77,31 +98,15 @@ section {
   }
 
   .card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
     max-width: 50%;
     pointer-events: none;
-    position: absolute;
     opacity: 0;
     transition: opacity 100ms ease-in;
   }
 
-  .card-text {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
   .card-link {
     background-color: var(--white);
-    border-radius: 0.25rem;
     color: var(--cocacola-red);
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.8rem 2rem;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 330ms ease-in-out;
 
     &:hover {
       background-color: var(--cod-gray);
@@ -114,7 +119,7 @@ section {
     position: absolute;
     right: 1rem;
     transition: transform 330ms ease-in-out;
-    transform: rotate(-750deg) scale(0);
+    transform: rotate(-450deg) scale(0);
   }
 
   .card-front-img {
@@ -126,12 +131,6 @@ section {
   }
 }
 
-.card-circle {
-  background-color: var(--cod-gray-light);
-  height: 21.875rem;
-  width: 21.875rem;
-}
-
 @keyframes shine {
   from {
     filter: drop-shadow(0 0 0rem var(--cocacola-red)) drop-shadow(0 0 0.5rem var(--cocacola-red));
@@ -141,17 +140,71 @@ section {
   }
 }
 
-/* Pepsi section */
-section:nth-child(2) {
+/* Sprite section */
+.sprite {
+  background-color: var(--sprite-blue);
+  color: var(--white);
+  
+  .card {
+    background-color: var(--sprite-yellow);
+    border-radius: 50%;
+    height: 18rem;
+    max-width: 100%;
+    padding: 2rem;
+    position: relative;
+    transition: all 330ms ease-in-out;
+    width: 18rem;
+    will-change: width;
+
+    &:is(:hover, :focus) {
+      border-radius: 1rem;
+      background-color: var(--sprite-green);
+      width: 40rem;
+
+      .card-main-img {
+        transform: scale(1) translateY(5rem);
+      }
+
+      .card-content {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  .card-content {
+    max-width: 40%;
+    opacity: 0;
+    transition: opacity 100ms ease-in;
+  }
+
+  .card-link {
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    color: var(--sprite-green);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--white);
+    }
+  }
+
+  .card-main-img {
+    bottom: -1rem;
+    height: 30rem;
+    position: absolute;
+    right: 0.7rem;
+    transition: transform 330ms ease-in-out;
+    transform: scale(0.85);
+  }
+}
+
+/* Coca zero section */
+section:nth-child(3) {
   background-color: #f4f4f4;
 }
 
 /* Fanta section */
-section:nth-child(3) {
-  background-color: #ff8528;
-}
-
-/* Sprite section */
 section:nth-child(4) {
-  background-color: #01a759;
+  background-color: #ff8528;
 }
