@@ -83,6 +83,7 @@ section {
       width: 40rem;
 
       .card-main-img {
+        opacity: 1;
         transform: rotate(35deg) scale(1);
       }
 
@@ -117,8 +118,9 @@ section {
     bottom: -1rem;
     height: 30rem;
     position: absolute;
+    opacity: 0;
     right: 1rem;
-    transition: transform 330ms ease-in-out;
+    transition: transform 330ms ease-in-out, opacity 150ms ease-in;
     transform: rotate(-450deg) scale(0);
   }
 
@@ -142,7 +144,7 @@ section {
 
 /* Sprite section */
 .sprite {
-  background-color: var(--sprite-blue);
+  background-color: var(--sprite-green);
   color: var(--white);
   
   .card {
@@ -158,7 +160,7 @@ section {
 
     &:is(:hover, :focus) {
       border-radius: 1rem;
-      background-color: var(--sprite-green);
+      background-color: var(--sprite-blue);
       width: 40rem;
 
       .card-main-img {
@@ -197,14 +199,4 @@ section {
     transition: transform 330ms ease-in-out;
     transform: scale(0.85);
   }
-}
-
-/* Coca zero section */
-section:nth-child(3) {
-  background-color: #f4f4f4;
-}
-
-/* Fanta section */
-section:nth-child(4) {
-  background-color: #ff8528;
 }
