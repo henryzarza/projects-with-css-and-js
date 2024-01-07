@@ -29,3 +29,4 @@ This repository is a compilation of some interesting interactions, animations, t
 | Futuristic Cards | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/futuristic-cards) | [Codepen](https://codepen.io/HenryZarza/full/NWEMPgo) |
 | Elastic Accordion Cards | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/elastic-accordion) | [Codepen](https://codepen.io/HenryZarza/full/abPvojX) |
 | Modern Menu | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/modern-menu) | [Codepen](https://codepen.io/HenryZarza/full/RwdrjYw) |
+| Cards interactions testing CSS nesting | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/cards-interactions) | [Codepen](https://codepen.io/HenryZarza/full/poYyWWX) |
