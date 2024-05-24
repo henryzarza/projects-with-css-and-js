@@ -1,0 +1,81 @@
+:root {
+  --cod-gray: #191919;
+  /* --white: #FFF; */
+  --bg-color: #191919;
+
+  --transition-duration: 290ms;
+  --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--cod-gray);
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 26.875rem;
+  max-width: 22rem;
+  position: relative;
+  width: 100%;
+}
+
+.card__video {
+  background-color: red;
+  border-radius: var(--radius);
+  flex: 1;
+}
+
+.card__info {
+  background-color: yellow;
+  border-radius: var(--radius);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card__content {
+  border: 1px solid red;
+  display: flex;
+}
+
+.card__photo {
+  background: url(https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/be-the-one_rlr5mx.jpg) center / cover no-repeat;
+  border: 1rem solid var(--bg-color);
+  border-radius: 50%;
+  height: 10rem;
+  left: -5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10rem;
+}
