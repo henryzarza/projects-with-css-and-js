@@ -1,17 +1,17 @@
 :root {
   --cod-gray: #191919;
-  /* --white: #FFF; */
+  --gallery: #EEEEEE;
+  --white: #FFF;
   --bg-color: #191919;
 
-  --transition-duration: 290ms;
-  --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
   --radius: 0.75rem;
+  --photo-size: 10rem;
 }
 
 * {
   box-sizing: border-box;
   color: var(--cod-gray);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -35,9 +35,36 @@ body {
 }
 
 .card__video {
-  background-color: red;
   border-radius: var(--radius);
   flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__video::before,
+.card__video::after {
+  background-color: red;
+  content: '';
+  height: 2rem;
+  position: absolute;
+  width: 2rem;
+}
+
+.card__video::before {
+  bottom: calc(var(--photo-size) / 2);
+}
+
+.card__video::after {
+  background-color: yellow;
+  bottom: 0;
+  left: calc(var(--photo-size) / 2 - 0.5rem);
+}
+
+.card__video video {
+  /* border-radius: var(--radius); */
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
 }
 
 .card__info {
@@ -47,35 +74,83 @@ body {
   flex: 1;
   flex-direction: column;
   margin-right: 2rem;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
 }
 
 .card__title {
   font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding-left: 5rem;
   text-transform: uppercase;
 }
 
 .card__subtitle {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  margin-bottom: 0.5rem;
+  padding-left: 5rem;
+  text-transform: uppercase;
 }
 
 .card__content {
+  align-items: center;
   border: 1px solid red;
   display: flex;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.card__item {
+  flex: 1;
+  text-align: center;
+}
+
+.card__item:nth-child(2) {
+  border-left: 1px solid var(--gallery);
+  border-right: 1px solid var(--gallery);
+}
+
+.card__highlight {
+  color: var(--gallery);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.card__highlight--number {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .card__photo {
   background: url(https://res.cloudinary.com/dcqu0udnd/image/upload/v1692883896/be-the-one_rlr5mx.jpg) center / cover no-repeat;
   border: 1rem solid var(--bg-color);
   border-radius: 50%;
-  height: 10rem;
+  height: var(--photo-size);
   left: -5rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 10rem;
+  width: var(--photo-size);
+}
+
+.card__link {
+  align-self: center;
+  background-color: blue;
+  border-radius: 2rem;
+  
+  box-shadow: 0 1rem 0 var(--bg-colors, red), 0.5rem 1rem 0 var(--bg-colors, red), -0.5rem 1rem 0 var(--bg-colors, red);
+
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: all 290ms cubic-bezier(0.79, 0.01, 0.38, 0.99);
+}
+
+.card__link:is(:hover, :focus) {
+  background-color: yellow;
+  color: var(--bg-color);
 }
