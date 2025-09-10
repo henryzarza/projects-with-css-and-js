@@ -31,3 +31,4 @@ This repository is a compilation of some interesting interactions, animations, t
 | Modern Menu | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/modern-menu) | [Codepen](https://codepen.io/HenryZarza/full/RwdrjYw) |
 | Cards interactions testing CSS nesting | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/cards-interactions) | [Codepen](https://codepen.io/HenryZarza/full/poYyWWX) |
 | CSS Inverted Border Radius | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/inverted-border-radius-card) | [Codepen](https://codepen.io/HenryZarza/full/GRamrxR) |
+| CSS scroll inverted animation | [Github](https://github.com/henryzarza/projects-with-css-and-js/tree/master/css-scroll-inverted-animation) | [Codepen](https://codepen.io/HenryZarza/full/jEbRXqr) |
