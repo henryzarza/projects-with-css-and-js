@@ -1,0 +1,123 @@
+:root {
+  --bg-color: #1A1A1A;
+  --white: #FFF;
+  --yellow: #FFA202;
+
+  --items: 6;
+  --img-size: 60%;
+  --content-size: 40%;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: var(--img-size) var(--content-size);
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  z-index: calc(var(--items) - var(--index, 0));
+  view-timeline: --article;
+}
+
+.article_img {
+  animation: darkenBrightness both linear;
+  animation-timeline: --article;
+  animation-range: entry 25% entry 100%;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: var(--img-size);
+
+  img {
+    animation: clipping both linear;
+    animation-timeline: --article;
+    animation-range: exit 0% exit 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.article_info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  grid-column: 2;
+  padding: 1rem 2rem;
+
+  a {
+    border: 0.125rem solid var(--yellow);
+    color: var(--yellow);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 0.5rem 2rem;
+    transition: all 290ms ease-in-out;
+
+    &:is(:hover, :focus) {
+      background-color: var(--yellow);
+      color: var(--bg-color);
+    }
+  }
+
+  h2 {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.96;
+  
+    span {
+      background: linear-gradient(var(--yellow));
+      background-size: 100% 30%;
+      background-position-y: 100%;
+      background-repeat: no-repeat;
+      transition: background-size 330ms ease-in-out;
+  
+      &:hover {
+        background-size: 100% 80%;
+      }
+    }
+  }
+
+  p {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+
+@keyframes darkenBrightness {
+  0% {
+    filter: grayscale(1) brightness(0.4);
+  }
+  100% {
+    filter: grayscale(0) brightness(1);
+  }
+}
+
+@keyframes clipping {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    filter: grayscale(0) brightness(1);
+    clip-path: inset(100% 0 0 0);
+  }
+}
